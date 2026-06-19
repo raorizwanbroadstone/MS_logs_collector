@@ -9,10 +9,11 @@ This module connects to an **Azure Log Analytics Workspace** and runs KQL (Kusto
 ```
 Azure OpenAI/
 ├── fetch_azure_diagnostic_logs.py    # Main script — queries Log Analytics and writes output
-└── azure_diagnostic_logs/            # Output directory for JSON result files
-    ├── workspace_test_2026-06-17_09-05-02.json
-    ├── workspace_test_2026-06-17_09-52-29.json
-    └── workspace_test_2026-06-17_10-04-24.json
+├── generate_bom.py                   # BOM generator — runs automatically after fetch; outputs CycloneDX 1.6 JSON
+├── logs/                             # Collector output (created automatically on first run)
+│   └── workspace_test_YYYY-MM-DD_HH-MM-SS.json
+└── report/                           # BOM output (created automatically on first run)
+    └── bom_YYYYMMDD_HHMMSS.json
 ```
 
 ---
@@ -36,8 +37,8 @@ These values are read from environment variables (set in the root `.env` file):
 Two constants control runtime behavior:
 
 ```python
-HOURS_BACK = 24          # How far back (in hours) to query logs
-OUTPUT_DIR = "azure_diagnostic_logs"   # Directory for output JSON files
+HOURS_BACK = 24                                   # How far back (in hours) to query logs
+OUTPUT_DIR = Path(__file__).parent / "logs"       # Directory for output JSON files
 ```
 
 ### Authentication
@@ -84,7 +85,7 @@ Orchestrates the full workflow:
 
 ### Output Format
 
-Results are written to `azure_diagnostic_logs/workspace_test_YYYY-MM-DD_HH-MM-SS.json`:
+Results are written to `logs/workspace_test_YYYY-MM-DD_HH-MM-SS.json`:
 
 ```json
 {
@@ -108,13 +109,29 @@ cd "Azure OpenAI and ML"
 python fetch_azure_diagnostic_logs.py
 ```
 
-A new timestamped JSON file will appear in `azure_diagnostic_logs/` upon success.
+A new timestamped JSON file will appear in `logs/` upon success, followed immediately by a CycloneDX 1.6 BOM written to `report/`.
 
 ---
 
-## Output Directory: `azure_diagnostic_logs/`
+## Output Directories
 
-See the [azure_diagnostic_logs/README.md](azure_diagnostic_logs/README.md) for details on output file schema and sample data.
+**`logs/`** — timestamped JSON files from each fetch run, one file per execution.
+
+**`report/`** — CycloneDX 1.6 BOM JSON files generated automatically after each fetch. Can also be regenerated standalone:
+
+```bash
+cd "Azure OpenAI"
+python generate_bom.py
+```
+
+Extracted BOM entities:
+
+| Entity | CycloneDX section | Unique key |
+|---|---|---|
+| Cognitive Services / OpenAI resources | `components` (type: application) | Lowercase ARM `_ResourceId` |
+| Resource providers | `services` | Provider name (e.g. `MICROSOFT.COGNITIVESERVICES`) |
+| Log Analytics tables | `services` | Table name (e.g. `AzureDiagnostics`) |
+| Log Analytics workspace | `services` | Workspace ID |
 
 ---
 

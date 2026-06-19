@@ -1,0 +1,55 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ea260ed2-c14e-4772-b3ed-8bb3c0b73833",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-19T07:41:36.664159+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "azure-openai-bom-generator",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-azure-tenant",
+      "name": "Azure Tenant",
+      "properties": [
+        {
+          "name": "azure:WorkspaceId",
+          "value": "d0d4e10f-0e11-455d-bd02-86ba33431d44"
+        },
+        {
+          "name": "azure:SourceFiles",
+          "value": "workspace_test_2026-06-19_07-41-28.json"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "services": [
+    {
+      "bom-ref": "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44",
+      "name": "Log Analytics Workspace (d0d4e10f...)",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "azure:WorkspaceId",
+          "value": "d0d4e10f-0e11-455d-bd02-86ba33431d44"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-azure-tenant",
+      "dependsOn": [
+        "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44"
+      ]
+    }
+  ]
+}

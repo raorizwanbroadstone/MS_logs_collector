@@ -5,6 +5,7 @@ import os
 from azure.identity import ClientSecretCredential
 from azure.monitor.query import LogsQueryClient, LogsQueryStatus
 from dotenv import load_dotenv
+import generate_bom
 load_dotenv()
 
 TENANT_ID = os.getenv("AZURE_TENANT_ID")
@@ -16,7 +17,7 @@ WORKSPACE_ID = os.getenv("AZURE_WORKSPACE_ID")
 
 
 HOURS_BACK = 24
-OUTPUT_DIR = Path("azure_diagnostic_logs")
+OUTPUT_DIR = Path(__file__).parent / "logs"
 
 def get_credential():
     return ClientSecretCredential(
@@ -121,6 +122,9 @@ def main():
 
     print("\n🎉 Done!")
     print(f"📄 Output saved to: {output_file}")
+
+    print("\nGenerating BOM report...")
+    generate_bom.main(target_file=output_file.resolve())
 
     if not all_results.get("Table_Counts"):
         print(
