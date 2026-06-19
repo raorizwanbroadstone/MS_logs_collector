@@ -7,18 +7,19 @@ This module collects operational and inventory data from Azure Machine Learning 
 ## Folder Structure
 
 ```text
-Azure ML Logs Collector/
-├── azure_ml_logs_collector.py     # Main script
+Azure Machine Learning/
+├── fetch_aml_logs.py              # Main script — collects logs and triggers BOM generation
+├── generate_bom.py                # BOM generator — runs automatically after fetch; outputs CycloneDX 1.6 JSON
 ├── .env                           # Azure credentials and configuration
-└── logs/                          # Generated JSON output files
-    ├── azure_ml_2026-06-17_09-15-42.json
-    ├── azure_ml_2026-06-17_10-03-18.json
-    └── azure_ml_2026-06-17_11-21-07.json
+├── logs/                          # Collector output (created automatically on first run)
+│   └── azure_ml_YYYY-MM-DD_HH-MM-SS.json
+└── report/                        # BOM output (created automatically on first run)
+    └── bom_YYYYMMDD_HHMMSS.json
 ```
 
 ---
 
-## Script: `azure_ml_logs_collector.py`
+## Script: `fetch_aml_logs.py`
 
 ### Purpose
 
@@ -54,7 +55,7 @@ Runtime configuration:
 
 ```python
 HOURS_BACK = 24
-OUTPUT_DIR = "logs"
+OUTPUT_DIR = Path(__file__).parent / "logs"
 ```
 
 ---
@@ -126,6 +127,32 @@ Example structure:
   ]
 }
 ```
+
+---
+
+## Script: `generate_bom.py`
+
+Runs automatically after each fetch. Streams the freshly written log file, extracts BOM-relevant entities, deduplicates them with a Bloom filter backed by an exact set (zero duplicates guaranteed), and writes a CycloneDX 1.6 BOM JSON to `report/`.
+
+Can also be run standalone:
+
+```bash
+cd "Azure Machine Learning"
+python generate_bom.py
+```
+
+Extracted BOM entities:
+
+| Entity | CycloneDX section | Type | Unique key |
+|---|---|---|---|
+| AML workspaces | `components` | application | Lowercase ARM `workspace_resource_id` |
+| Registered ML models | `components` | library | `workspace_resource_id/models/name/version` |
+| Compute clusters / instances | `components` | machine | `workspace_resource_id/compute/name` |
+| Data assets | `components` | file | `workspace_resource_id/data/name/version` |
+| Client applications (OAuth2) | `components` | application | `claims.appid` |
+| Azure resource providers | `services` | — | Provider name lowercased |
+| Online inference endpoints | `services` | — | `workspace_resource_id/endpoints/name` |
+| Log Analytics workspaces | `services` | — | Workspace ID |
 
 ---
 

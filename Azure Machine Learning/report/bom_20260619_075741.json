@@ -1,0 +1,79 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:5ad520b0-c6d0-4906-aef3-d6c37323d5f7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-19T07:57:41.806166+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "azure-aml-bom-generator",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-azure-tenant",
+      "name": "Azure Tenant",
+      "properties": [
+        {
+          "name": "azure:TenantId",
+          "value": ""
+        },
+        {
+          "name": "azure:SourceFiles",
+          "value": "azure_ml_2026-06-19_07-57-20.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "aml_workspace-/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourcegroups/logs-test-rg/providers/microsoft.machinelearningservices/workspaces/aibom-demo",
+      "name": "aibom-demo",
+      "properties": [
+        {
+          "name": "azure:WorkspaceResourceId",
+          "value": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourcegroups/logs-test-rg/providers/microsoft.machinelearningservices/workspaces/aibom-demo"
+        },
+        {
+          "name": "azure:SubscriptionId",
+          "value": "578f7d16-b299-4b9f-8f47-fa0bc5427842"
+        },
+        {
+          "name": "azure:ResourceGroup",
+          "value": "logs-test-rg"
+        },
+        {
+          "name": "azure:Location",
+          "value": "eastus"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "bom-ref": "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44",
+      "name": "Log Analytics Workspace (d0d4e10f...)",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "azure:WorkspaceId",
+          "value": "d0d4e10f-0e11-455d-bd02-86ba33431d44"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-azure-tenant",
+      "dependsOn": [
+        "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44"
+      ]
+    }
+  ]
+}

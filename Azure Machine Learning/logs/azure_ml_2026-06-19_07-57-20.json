@@ -1,0 +1,47 @@
+{
+  "collectionTime": "2026-06-19T07:57:41.778155+00:00",
+  "aml_sdk_available": false,
+  "summary": {
+    "subscriptions_processed": 1,
+    "workspaces_processed": 1,
+    "errors": 0
+  },
+  "workspaces": [
+    {
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "workspace_resource_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.MachineLearningServices/workspaces/aibom-demo",
+      "workspace_name": "aibom-demo",
+      "resource_group": "logs-test-rg",
+      "location": "eastus",
+      "diagnostic_settings": {
+        "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+      },
+      "activity_logs": [],
+      "aml_log_tables": {
+        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
+          "AmlComputeJobEvents": {
+            "error": "(BadArgumentError) The request had some invalid properties\nCode: BadArgumentError\nMessage: The request had some invalid properties\nInner error: {\n    \"code\": \"SemanticError\",\n    \"message\": \"A semantic error occurred.\",\n    \"innererror\": {\n        \"code\": \"SEM0100\",\n        \"message\": \"'where' operator: Failed to resolve table or column expression named 'AmlComputeJobEvents'\"\n    }\n}"
+          },
+          "AmlComputeClusterEvents": {
+            "error": "(BadArgumentError) The request had some invalid properties\nCode: BadArgumentError\nMessage: The request had some invalid properties\nInner error: {\n    \"code\": \"SemanticError\",\n    \"message\": \"A semantic error occurred.\",\n    \"innererror\": {\n        \"code\": \"SEM0100\",\n        \"message\": \"'where' operator: Failed to resolve table or column expression named 'AmlComputeClusterEvents'\"\n    }\n}"
+          },
+          "AmlComputeInstanceEvents": {
+            "error": "(BadArgumentError) The request had some invalid properties\nCode: BadArgumentError\nMessage: The request had some invalid properties\nInner error: {\n    \"code\": \"SemanticError\",\n    \"message\": \"A semantic error occurred.\",\n    \"innererror\": {\n        \"code\": \"SEM0100\",\n        \"message\": \"'where' operator: Failed to resolve table or column expression named 'AmlComputeInstanceEvents'\"\n    }\n}"
+          },
+          "AmlRunStatusChangedEvent": [],
+          "AmlDataSetEvent": [],
+          "AmlModelEvent": {
+            "error": "(BadArgumentError) The request had some invalid properties\nCode: BadArgumentError\nMessage: The request had some invalid properties\nInner error: {\n    \"code\": \"SemanticError\",\n    \"message\": \"A semantic error occurred.\",\n    \"innererror\": {\n        \"code\": \"SEM0100\",\n        \"message\": \"'where' operator: Failed to resolve table or column expression named 'AmlModelEvent'\"\n    }\n}"
+          },
+          "AmlDeploymentEvent": [],
+          "AmlInferencingEvent": []
+        }
+      },
+      "assets": {
+        "status": "azure-ai-ml package not installed \u2014 run: pip install azure-ai-ml"
+      },
+      "error": null,
+      "subscription_name": "Azure subscription 1"
+    }
+  ]
+}
