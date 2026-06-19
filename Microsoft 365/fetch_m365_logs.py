@@ -2,9 +2,11 @@ import msal
 import requests
 import json
 from datetime import datetime, timedelta, UTC
+from pathlib import Path
 import time
 import os
 from dotenv import load_dotenv
+import generate_bom
 load_dotenv()
 
 TENANT_ID = os.getenv("M365_TENANT_ID")
@@ -113,6 +115,9 @@ def main():
 
     print(f"\n✅ Done! Total events fetched: {len(all_logs)}")
     print(f"Saved to {OUTPUT_FILE}")
+
+    print("\nGenerating BOM report...")
+    generate_bom.main(target_file=Path(OUTPUT_FILE))
 
 def fetch_content_blob(token, content_uri):
     headers = {"Authorization": f"Bearer {token}"}
