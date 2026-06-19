@@ -23,7 +23,9 @@ now = datetime.now(UTC)
 START_TIME = (now - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
 END_TIME = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-OUTPUT_FILE = "m365_audit_logs.json"
+LOG_DIR = os.path.join(os.path.dirname(__file__), "logs")
+os.makedirs(LOG_DIR, exist_ok=True)
+OUTPUT_FILE = os.path.join(LOG_DIR, f"m365_audit_logs_{now.strftime('%Y%m%d_%H%M%S')}.json")
 
 def get_access_token():
     authority = f"https://login.microsoftonline.com/{TENANT_ID}"
