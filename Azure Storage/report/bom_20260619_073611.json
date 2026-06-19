@@ -1,0 +1,149 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:63f3c1ac-6738-4f91-baa3-941a3c819e2f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-19T07:36:11.892618+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "azure-storage-bom-generator",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-azure-tenant",
+      "name": "Azure Tenant",
+      "properties": [
+        {
+          "name": "azure:TenantId",
+          "value": ""
+        },
+        {
+          "name": "azure:SourceFiles",
+          "value": "azure_storage_2026-06-19_07-35-44.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "storage_account-/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/rg-logs/providers/Microsoft.Storage/storageAccounts/demostorageforlogs",
+      "name": "demostorageforlogs",
+      "properties": [
+        {
+          "name": "azure:StorageAccountId",
+          "value": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/rg-logs/providers/Microsoft.Storage/storageAccounts/demostorageforlogs"
+        },
+        {
+          "name": "azure:StorageAccountName",
+          "value": "demostorageforlogs"
+        },
+        {
+          "name": "azure:SubscriptionId",
+          "value": "578f7d16-b299-4b9f-8f47-fa0bc5427842"
+        },
+        {
+          "name": "azure:ResourceGroup",
+          "value": "rg-logs"
+        },
+        {
+          "name": "azure:Location",
+          "value": "eastus"
+        },
+        {
+          "name": "azure:DiagnosticLoggingEnabled",
+          "value": "False"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "storage_account-/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/azuredblogstest12345",
+      "name": "azuredblogstest12345",
+      "properties": [
+        {
+          "name": "azure:StorageAccountId",
+          "value": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/azuredblogstest12345"
+        },
+        {
+          "name": "azure:StorageAccountName",
+          "value": "azuredblogstest12345"
+        },
+        {
+          "name": "azure:SubscriptionId",
+          "value": "578f7d16-b299-4b9f-8f47-fa0bc5427842"
+        },
+        {
+          "name": "azure:ResourceGroup",
+          "value": "logs-test-rg"
+        },
+        {
+          "name": "azure:Location",
+          "value": "eastus"
+        },
+        {
+          "name": "azure:DiagnosticLoggingEnabled",
+          "value": "False"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "storage_account-/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/aibomdemo0394613281",
+      "name": "aibomdemo0394613281",
+      "properties": [
+        {
+          "name": "azure:StorageAccountId",
+          "value": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/aibomdemo0394613281"
+        },
+        {
+          "name": "azure:StorageAccountName",
+          "value": "aibomdemo0394613281"
+        },
+        {
+          "name": "azure:SubscriptionId",
+          "value": "578f7d16-b299-4b9f-8f47-fa0bc5427842"
+        },
+        {
+          "name": "azure:ResourceGroup",
+          "value": "logs-test-rg"
+        },
+        {
+          "name": "azure:Location",
+          "value": "eastus"
+        },
+        {
+          "name": "azure:DiagnosticLoggingEnabled",
+          "value": "False"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "bom-ref": "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44",
+      "name": "Log Analytics Workspace (d0d4e10f...)",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "azure:WorkspaceId",
+          "value": "d0d4e10f-0e11-455d-bd02-86ba33431d44"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-azure-tenant",
+      "dependsOn": [
+        "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44"
+      ]
+    }
+  ]
+}

@@ -9,10 +9,13 @@ This module authenticates with Azure using a dedicated Service Principal, enumer
 ```
 Azure Storage/
 ├── fetch_azure_storage_logs.py   # Main collector — queries activity logs + Log Analytics
+├── generate_bom.py               # BOM generator — runs automatically after fetch; outputs CycloneDX 1.6 JSON
 ├── insert_data.py                # Test data generator — uploads, reads, and deletes a blob
 ├── README.md                     # This file
-└── logs/                         # Output directory (created automatically on first run)
-    └── azure_storage_YYYY-MM-DD_HH-MM-SS.json
+├── logs/                         # Collector output (created automatically on first run)
+│   └── azure_storage_YYYY-MM-DD_HH-MM-SS.json
+└── report/                       # BOM output (created automatically on first run)
+    └── bom_YYYYMMDD_HHMMSS.json
 ```
 
 ---
@@ -197,6 +200,13 @@ Expected output:
   📦 Storage accounts processed: 1
   📄 Total log events collected: 9
   💾 Output saved to: ...\Azure Storage\logs\azure_storage_2026-06-17_12-06-29.json
+
+Generating BOM report...
+Processing azure_storage_2026-06-17_12-06-29.json ...
+  3 new components, 2 new services
+
+Report : ...\Azure Storage\report\bom_20260617_120629.json
+Total  : 3 components, 2 services
 ```
 
 ---
@@ -245,6 +255,28 @@ credential = ClientSecretCredential(
 ```python
 HOURS_BACK = 24        # Look-back window in hours
 OUTPUT_DIR = Path(__file__).parent / "logs"   # Azure Storage/logs/
+```
+
+---
+
+### `generate_bom.py`
+
+Streams the log file produced by `fetch_azure_storage_logs.py`, deduplicates extracted entities with a Bloom filter backed by an exact set (zero duplicate guarantee), and writes a CycloneDX 1.6 BOM JSON report to `report/`.
+
+Extracted entities:
+
+| Entity | CycloneDX section | Unique key |
+|---|---|---|
+| Storage accounts | `components` (type: application) | Full ARM resource ID |
+| Client applications | `components` (type: application) | `claims.appid` from activity log JWT |
+| Resource providers | `services` | Provider name (e.g. `Microsoft.Storage`) |
+| Log Analytics workspaces | `services` | Workspace ID |
+
+Called automatically at the end of `fetch_azure_storage_logs.py`. Can also be run standalone to reprocess existing logs:
+
+```bash
+cd "Azure Storage"
+python generate_bom.py
 ```
 
 ---

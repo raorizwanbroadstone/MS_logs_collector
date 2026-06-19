@@ -1,0 +1,119 @@
+{
+  "collectionTime": "2026-06-19T07:34:40.864596+00:00",
+  "summary": {
+    "subscriptions_processed": 1,
+    "storage_accounts_processed": 3,
+    "total_log_events_collected": 0,
+    "errors": 0
+  },
+  "storage_accounts": [
+    {
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "subscription_name": "Azure subscription 1",
+      "storage_account_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/rg-logs/providers/Microsoft.Storage/storageAccounts/demostorageforlogs",
+      "storage_account_name": "demostorageforlogs",
+      "resource_group": "rg-logs",
+      "location": "eastus",
+      "diagnostic_logging_enabled": false,
+      "diagnostic_settings": {
+        "account": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "blobServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "fileServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "queueServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "tableServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        }
+      },
+      "activity_logs": [],
+      "storage_diagnostic_logs": {
+        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
+          "StorageBlobLogs": [],
+          "StorageFileLogs": [],
+          "StorageQueueLogs": [],
+          "StorageTableLogs": []
+        }
+      },
+      "error": null
+    },
+    {
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "subscription_name": "Azure subscription 1",
+      "storage_account_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/azuredblogstest12345",
+      "storage_account_name": "azuredblogstest12345",
+      "resource_group": "logs-test-rg",
+      "location": "eastus",
+      "diagnostic_logging_enabled": false,
+      "diagnostic_settings": {
+        "account": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "blobServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "fileServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "queueServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "tableServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        }
+      },
+      "activity_logs": [],
+      "storage_diagnostic_logs": {
+        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
+          "StorageBlobLogs": [],
+          "StorageFileLogs": [],
+          "StorageQueueLogs": [],
+          "StorageTableLogs": []
+        }
+      },
+      "error": null
+    },
+    {
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "subscription_name": "Azure subscription 1",
+      "storage_account_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Storage/storageAccounts/aibomdemo0394613281",
+      "storage_account_name": "aibomdemo0394613281",
+      "resource_group": "logs-test-rg",
+      "location": "eastus",
+      "diagnostic_logging_enabled": false,
+      "diagnostic_settings": {
+        "account": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "blobServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "fileServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "queueServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        },
+        "tableServices/default": {
+          "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+        }
+      },
+      "activity_logs": [],
+      "storage_diagnostic_logs": {
+        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
+          "StorageBlobLogs": [],
+          "StorageFileLogs": [],
+          "StorageQueueLogs": [],
+          "StorageTableLogs": []
+        }
+      },
+      "error": null
+    }
+  ]
+}

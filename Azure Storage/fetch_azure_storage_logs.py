@@ -10,6 +10,7 @@ from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.subscription import SubscriptionClient
 from azure.monitor.query import LogsQueryClient, LogsQueryStatus
 from dotenv import load_dotenv
+import generate_bom
 
 load_dotenv()
 
@@ -340,6 +341,9 @@ def main():
     print(f"  📄 Total log events collected: {total_log_events}")
     print(f"  ❌ Errors: {total_errors}")
     print(f"  💾 Output saved to: {output_file}")
+
+    print("\nGenerating BOM report...")
+    generate_bom.main(target_file=output_file)
 
 
 if __name__ == "__main__":
