@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:63f3c1ac-6738-4f91-baa3-941a3c819e2f",
+  "serialNumber": "urn:uuid:a8ca8ff6-eff0-4b80-8269-0a626f124045",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-06-19T07:36:11.892618+00:00",
+    "timestamp": "2026-06-22T20:06:04.008241+00:00",
     "tools": {
       "components": [
         {
@@ -25,7 +25,7 @@
         },
         {
           "name": "azure:SourceFiles",
-          "value": "azure_storage_2026-06-19_07-35-44.json"
+          "value": "azure_storage_2026-06-22_20-05-49.json"
         }
       ]
     }
@@ -125,25 +125,11 @@
       ]
     }
   ],
-  "services": [
-    {
-      "bom-ref": "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44",
-      "name": "Log Analytics Workspace (d0d4e10f...)",
-      "authenticated": true,
-      "properties": [
-        {
-          "name": "azure:WorkspaceId",
-          "value": "d0d4e10f-0e11-455d-bd02-86ba33431d44"
-        }
-      ]
-    }
-  ],
+  "services": [],
   "dependencies": [
     {
       "ref": "root-azure-tenant",
-      "dependsOn": [
-        "log_analytics_workspace-d0d4e10f-0e11-455d-bd02-86ba33431d44"
-      ]
+      "dependsOn": []
     }
   ]
 }

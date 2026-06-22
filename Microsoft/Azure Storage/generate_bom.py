@@ -20,15 +20,15 @@ import mmh3
 from bitarray import bitarray
 
 SCRIPT_DIR = Path(__file__).parent
-LOGS_DIR   = SCRIPT_DIR / "logs"
+LOGS_DIR = SCRIPT_DIR / "logs"
 REPORT_DIR = SCRIPT_DIR / "report"
 
 BLOOM_CAPACITY = 500_000
-BLOOM_FPR      = 0.0001
+BLOOM_FPR = 0.0001
 
 
+# Bloom filter and deduplication layer
 
-# Bloom filter + deduplication layer
 class BloomFilter:
     """
     Probabilistic membership structure using MurmurHash3 double-hashing over a
@@ -37,24 +37,24 @@ class BloomFilter:
     """
 
     def __init__(self, capacity: int, fpr: float):
-        m = math.ceil(-(capacity * math.log(fpr)) / (math.log(2) ** 2))
-        k = max(1, round((m / capacity) * math.log(2)))
-        self._m    = m
-        self._k    = k
-        self._bits = bitarray(m)
-        self._bits.setall(0)
+        bit_array_size = math.ceil(-(capacity * math.log(fpr)) / (math.log(2) ** 2))
+        hash_count = max(1, round((bit_array_size / capacity) * math.log(2)))
+        self.bit_array_size = bit_array_size
+        self.hash_count = hash_count
+        self.bits = bitarray(bit_array_size)
+        self.bits.setall(0)
 
-    def _positions(self, key: str) -> list[int]:
-        h1 = mmh3.hash(key, seed=0, signed=False)
-        h2 = mmh3.hash(key, seed=1, signed=False)
-        return [(h1 + i * h2) % self._m for i in range(self._k)]
+    def compute_positions(self, key: str) -> list[int]:
+        primary_hash = mmh3.hash(key, seed=0, signed=False)
+        secondary_hash = mmh3.hash(key, seed=1, signed=False)
+        return [(primary_hash + i * secondary_hash) % self.bit_array_size for i in range(self.hash_count)]
 
     def add(self, key: str) -> None:
-        for p in self._positions(key):
-            self._bits[p] = 1
+        for position in self.compute_positions(key):
+            self.bits[position] = 1
 
     def might_contain(self, key: str) -> bool:
-        return all(self._bits[p] for p in self._positions(key))
+        return all(self.bits[position] for position in self.compute_positions(key))
 
 
 class DeduplicatingSet:
@@ -65,33 +65,35 @@ class DeduplicatingSet:
     """
 
     def __init__(self, capacity: int = BLOOM_CAPACITY, fpr: float = BLOOM_FPR):
-        self._bloom = BloomFilter(capacity, fpr)
-        self._seen: set[str] = set()
+        self.bloom_filter = BloomFilter(capacity, fpr)
+        self.seen_keys: set[str] = set()
 
     def add_if_new(self, key: str) -> bool:
-        """Returns True and records key if it has never been seen; False otherwise."""
-        if self._bloom.might_contain(key) and key in self._seen:
+        """Returns True and records the key if it has never been seen; False otherwise."""
+        if self.bloom_filter.might_contain(key) and key in self.seen_keys:
             return False
-        self._bloom.add(key)
-        self._seen.add(key)
+        self.bloom_filter.add(key)
+        self.seen_keys.add(key)
         return True
 
     def __len__(self) -> int:
-        return len(self._seen)
+        return len(self.seen_keys)
 
 
 # Log streaming
+
 def stream_storage_accounts(log_file: Path):
     """
     Yields each storage account object from the nested storage_accounts array.
     The log format is { storage_accounts: [...] }, not a top-level array, so the
     ijson prefix must be "storage_accounts.item".
     """
-    with log_file.open("rb") as fh:
-        yield from ijson.items(fh, "storage_accounts.item")
+    with log_file.open("rb") as file_handle:
+        yield from ijson.items(file_handle, "storage_accounts.item")
 
 
 # Entity extractors
+
 def extract_storage_account(account: dict) -> dict | None:
     """
     Builds a storage account component from the account-level metadata block.
@@ -193,13 +195,14 @@ def capture_tenant_id(account: dict) -> str:
 
 
 # CycloneDX 1.6 serializers
-def to_cyclonedx_component(raw: dict) -> dict:
+
+def to_cyclonedx_component(entity: dict) -> dict:
     """
     Maps a raw storage_account or client_app dict to a CycloneDX 1.6 component
     (type: application). Azure-specific fields are stored as azure: properties.
     """
-    bom_ref = f"{raw['kind']}-{raw['key']}"
-    props: list[dict] = []
+    bom_ref = f"{entity['kind']}-{entity['key']}"
+    properties: list[dict] = []
 
     field_map: dict[str, dict[str, str]] = {
         "storage_account": {
@@ -217,35 +220,35 @@ def to_cyclonedx_component(raw: dict) -> dict:
         },
     }
 
-    for field, cdx_name in field_map.get(raw["kind"], {}).items():
-        value = raw.get(field, "")
+    for field, cdx_name in field_map.get(entity["kind"], {}).items():
+        value = entity.get(field, "")
         if value:
-            props.append({"name": cdx_name, "value": value})
+            properties.append({"name": cdx_name, "value": value})
 
-    comp: dict = {
+    component: dict = {
         "type":    "application",
         "bom-ref": bom_ref,
-        "name":    raw["name"],
+        "name":    entity["name"],
     }
-    if props:
-        comp["properties"] = props
-    return comp
+    if properties:
+        component["properties"] = properties
+    return component
 
 
-def to_cyclonedx_service(raw: dict) -> dict:
+def to_cyclonedx_service(entity: dict) -> dict:
     """
     Maps a raw resource_provider or log_analytics_workspace dict to a CycloneDX
     1.6 service object. authenticated is True as all Azure services require OAuth2.
     """
-    bom_ref = f"{raw['kind']}-{raw['key']}"
-    svc: dict = {
+    bom_ref = f"{entity['kind']}-{entity['key']}"
+    service_entry: dict = {
         "bom-ref":       bom_ref,
-        "name":          raw["name"],
+        "name":          entity["name"],
         "authenticated": True,
     }
-    if raw["kind"] == "log_analytics_workspace" and raw.get("ws_id"):
-        svc["properties"] = [{"name": "azure:WorkspaceId", "value": raw["ws_id"]}]
-    return svc
+    if entity["kind"] == "log_analytics_workspace" and entity.get("ws_id"):
+        service_entry["properties"] = [{"name": "azure:WorkspaceId", "value": entity["ws_id"]}]
+    return service_entry
 
 
 def build_dependency_graph(
@@ -257,25 +260,24 @@ def build_dependency_graph(
     Root Azure tenant depends on every resource provider and workspace.
     Storage accounts and client apps depend on the resource provider they interact with.
     """
-    service_refs = {r["key"]: f"{r['kind']}-{r['key']}" for r in raw_services}
+    service_refs = {entity["key"]: f"{entity['kind']}-{entity['key']}" for entity in raw_services}
 
-    deps: list[dict] = [
+    dependencies: list[dict] = [
         {
             "ref":       "root-azure-tenant",
             "dependsOn": list(service_refs.values()),
         }
     ]
 
-    for raw in raw_components:
-        workload = raw.get("workload", "")
-        ref = service_refs.get(workload)
-        if ref:
-            deps.append({
-                "ref":       f"{raw['kind']}-{raw['key']}",
-                "dependsOn": [ref],
+    for entity in raw_components:
+        workload_ref = service_refs.get(entity.get("workload", ""))
+        if workload_ref:
+            dependencies.append({
+                "ref":       f"{entity['kind']}-{entity['key']}",
+                "dependsOn": [workload_ref],
             })
 
-    return deps
+    return dependencies
 
 
 def build_cyclonedx_bom(
@@ -315,18 +317,19 @@ def build_cyclonedx_bom(
                 ],
             },
         },
-        "components":   [to_cyclonedx_component(r) for r in raw_components],
-        "services":     [to_cyclonedx_service(r) for r in raw_services],
+        "components":   [to_cyclonedx_component(entity) for entity in raw_components],
+        "services":     [to_cyclonedx_service(entity) for entity in raw_services],
         "dependencies": build_dependency_graph(raw_components, raw_services),
     }
 
 
 # Per-file processor
+
 def process_log_file(
     log_file: Path,
-    account_dedup:   DeduplicatingSet,
-    client_dedup:    DeduplicatingSet,
-    provider_dedup:  DeduplicatingSet,
+    storage_account_dedup: DeduplicatingSet,
+    client_app_dedup: DeduplicatingSet,
+    resource_provider_dedup: DeduplicatingSet,
     workspace_dedup: DeduplicatingSet,
 ) -> tuple[list[dict], list[dict], str]:
     """
@@ -336,33 +339,34 @@ def process_log_file(
     Returns (raw_components, raw_services, tenant_id).
     """
     raw_components: list[dict] = []
-    raw_services:   list[dict] = []
+    raw_services: list[dict] = []
     tenant_id = ""
 
     for account in stream_storage_accounts(log_file):
         if not tenant_id:
             tenant_id = capture_tenant_id(account)
 
-        sa = extract_storage_account(account)
-        if sa and account_dedup.add_if_new(sa["key"]):
-            raw_components.append(sa)
+        storage_account_entity = extract_storage_account(account)
+        if storage_account_entity and storage_account_dedup.add_if_new(storage_account_entity["key"]):
+            raw_components.append(storage_account_entity)
 
-        for ca in extract_client_apps(account):
-            if client_dedup.add_if_new(ca["key"]):
-                raw_components.append(ca)
+        for client_app_entity in extract_client_apps(account):
+            if client_app_dedup.add_if_new(client_app_entity["key"]):
+                raw_components.append(client_app_entity)
 
-        for rp in extract_resource_providers(account):
-            if provider_dedup.add_if_new(rp["key"]):
-                raw_services.append(rp)
+        for resource_provider_entity in extract_resource_providers(account):
+            if resource_provider_dedup.add_if_new(resource_provider_entity["key"]):
+                raw_services.append(resource_provider_entity)
 
-        for ws in extract_log_analytics_workspaces(account):
-            if workspace_dedup.add_if_new(ws["key"]):
-                raw_services.append(ws)
+        for workspace_entity in extract_log_analytics_workspaces(account):
+            if workspace_dedup.add_if_new(workspace_entity["key"]):
+                raw_services.append(workspace_entity)
 
     return raw_components, raw_services, tenant_id
 
 
 # Entry point
+
 def main(target_file: Path | None = None) -> None:
     """
     Entry point. Processes target_file if given (called from fetch_azure_storage_logs.py),
@@ -376,35 +380,35 @@ def main(target_file: Path | None = None) -> None:
         print(f"No JSON files found in {LOGS_DIR}")
         return
 
-    account_dedup   = DeduplicatingSet()
-    client_dedup    = DeduplicatingSet()
-    provider_dedup  = DeduplicatingSet()
+    storage_account_dedup = DeduplicatingSet()
+    client_app_dedup = DeduplicatingSet()
+    resource_provider_dedup = DeduplicatingSet()
     workspace_dedup = DeduplicatingSet()
 
     all_components: list[dict] = []
-    all_services:   list[dict] = []
+    all_services: list[dict] = []
     tenant_id = ""
 
     for log_file in log_files:
         print(f"Processing {log_file.name} ...")
-        comps, svcs, fid = process_log_file(
-            log_file, account_dedup, client_dedup, provider_dedup, workspace_dedup
+        components, services, first_tenant_id = process_log_file(
+            log_file, storage_account_dedup, client_app_dedup, resource_provider_dedup, workspace_dedup
         )
-        all_components.extend(comps)
-        all_services.extend(svcs)
+        all_components.extend(components)
+        all_services.extend(services)
         if not tenant_id:
-            tenant_id = fid
-        print(f"  {len(comps)} new components, {len(svcs)} new services")
+            tenant_id = first_tenant_id
+        print(f"  {len(components)} new components, {len(services)} new services")
 
-    source_files = ", ".join(f.name for f in log_files)
+    source_files = ", ".join(file.name for file in log_files)
     bom = build_cyclonedx_bom(all_components, all_services, tenant_id, source_files)
 
-    timestamp   = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     output_path = REPORT_DIR / f"bom_{timestamp}.json"
     output_path.write_text(json.dumps(bom, indent=2), encoding="utf-8")
 
-    print(f"\nReport : {output_path}")
-    print(f"Total  : {len(all_components)} components, {len(all_services)} services")
+    print(f"\nBOM report saved to: {output_path}")
+    print(f"Total: {len(all_components)} components, {len(all_services)} services")
 
 
 if __name__ == "__main__":

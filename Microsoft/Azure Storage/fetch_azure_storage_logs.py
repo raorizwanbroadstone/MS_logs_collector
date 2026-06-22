@@ -17,8 +17,6 @@ load_dotenv()
 TENANT_ID = os.getenv("AZURE_STORAGE_TENANT_ID")
 CLIENT_ID = os.getenv("AZURE_STORAGE_CLIENT_ID")
 CLIENT_SECRET = os.getenv("AZURE_STORAGE_CLIENT_SECRET")
-FALLBACK_WORKSPACE_ID = os.getenv("AZURE_WORKSPACE_ID")
-# Comma-separated subscription IDs used when the SP cannot list subscriptions automatically
 SUBSCRIPTION_IDS_ENV = os.getenv("AZURE_STORAGE_SUBSCRIPTION_ID")
 
 HOURS_BACK = 24
@@ -51,17 +49,17 @@ def get_credential():
 
 
 def get_subscriptions(credential):
-    print("  🔍 Listing subscriptions...")
+    print("Listing subscriptions...")
     try:
         client = SubscriptionClient(credential)
-        subs = [
-            {"id": s.subscription_id, "name": s.display_name}
-            for s in client.subscriptions.list()
+        subscription_list = [
+            {"id": subscription.subscription_id, "name": subscription.display_name}
+            for subscription in client.subscriptions.list()
         ]
-        print(f"  ✅ Found {len(subs)} subscription(s)")
-        return subs
-    except Exception as e:
-        print(f"  ❌ Error listing subscriptions: {e}")
+        print(f"  Found {len(subscription_list)} subscription(s).")
+        return subscription_list
+    except Exception as error:
+        print(f"  Error listing subscriptions: {error}")
         return []
 
 
@@ -73,55 +71,59 @@ def get_storage_accounts(credential, subscription_id):
             filter="resourceType eq 'Microsoft.Storage/storageAccounts'"
         ):
             parts = resource.id.split("/")
-            rg = parts[parts.index("resourceGroups") + 1] if "resourceGroups" in parts else "unknown"
+            resource_group = (
+                parts[parts.index("resourceGroups") + 1]
+                if "resourceGroups" in parts
+                else "unknown"
+            )
             accounts.append({
                 "id": resource.id,
                 "name": resource.name,
                 "location": resource.location,
-                "resource_group": rg,
+                "resource_group": resource_group,
             })
         return accounts
-    except HttpResponseError as e:
-        print(f"    ⚠️  Cannot list storage accounts (HTTP {e.status_code}): {e.message}")
+    except HttpResponseError as error:
+        print(f"    Cannot list storage accounts (HTTP {error.status_code}): {error.message}")
         return []
-    except Exception as e:
-        print(f"    ⚠️  Cannot list storage accounts: {e}")
+    except Exception as error:
+        print(f"    Cannot list storage accounts: {error}")
         return []
 
 
 def get_diagnostic_settings(monitor_client, resource_uri):
     try:
         settings = list(monitor_client.diagnostic_settings.list(resource_uri=resource_uri))
-        return [s.as_dict() for s in settings]
-    except HttpResponseError as e:
-        if e.status_code in (401, 403):
-            return {"error": "insufficient_permissions", "detail": str(e.message)}
-        return {"error": str(e.message or e)}
-    except Exception as e:
-        return {"error": str(e)}
+        return [setting.as_dict() for setting in settings]
+    except HttpResponseError as error:
+        if error.status_code in (401, 403):
+            return {"error": "insufficient_permissions", "detail": str(error.message)}
+        return {"error": str(error.message or error)}
+    except Exception as error:
+        return {"error": str(error)}
 
 
 def collect_all_diagnostic_settings(monitor_client, account_id):
-    """Collect diagnostic settings from the account and all sub-resources."""
+    """Collect diagnostic settings from the account level and all four sub-resources."""
     all_settings = {
         "account": get_diagnostic_settings(monitor_client, account_id),
     }
-    for sub in STORAGE_SUB_RESOURCES:
-        uri = f"{account_id}/{sub}"
-        all_settings[sub] = get_diagnostic_settings(monitor_client, uri)
+    for sub_resource in STORAGE_SUB_RESOURCES:
+        uri = f"{account_id}/{sub_resource}"
+        all_settings[sub_resource] = get_diagnostic_settings(monitor_client, uri)
     return all_settings
 
 
 def extract_workspace_ids(all_diag_settings):
-    """Pull unique Log Analytics workspace IDs out of all diagnostic settings."""
+    """Pull unique Log Analytics workspace IDs from all diagnostic settings."""
     workspace_ids = []
-    for _level, settings in all_diag_settings.items():
+    for diagnostic_level, settings in all_diag_settings.items():
         if not isinstance(settings, list):
             continue
         for setting in settings:
-            ws_id = setting.get("workspace_id")
-            if ws_id and ws_id not in workspace_ids:
-                workspace_ids.append(ws_id)
+            workspace_id = setting.get("workspace_id")
+            if workspace_id and workspace_id not in workspace_ids:
+                workspace_ids.append(workspace_id)
     return workspace_ids
 
 
@@ -134,17 +136,17 @@ def get_activity_logs(monitor_client, account_id):
     )
     try:
         events = list(monitor_client.activity_logs.list(filter=filter_str))
-        return [e.as_dict() for e in events]
-    except HttpResponseError as e:
-        if e.status_code in (401, 403):
-            return {"error": "insufficient_permissions", "detail": str(e.message)}
-        return {"error": str(e.message or e)}
-    except Exception as e:
-        return {"error": str(e)}
+        return [event.as_dict() for event in events]
+    except HttpResponseError as error:
+        if error.status_code in (401, 403):
+            return {"error": "insufficient_permissions", "detail": str(error.message)}
+        return {"error": str(error.message or error)}
+    except Exception as error:
+        return {"error": str(error)}
 
 
 def query_log_analytics(logs_client, workspace_id, account_name):
-    """Query Log Analytics storage tables for a given storage account name."""
+    """Query Log Analytics storage tables for the given storage account name."""
     end_time = datetime.now(timezone.utc)
     start_time = end_time - timedelta(hours=HOURS_BACK)
     results = {}
@@ -164,39 +166,42 @@ def query_log_analytics(logs_client, workspace_id, account_name):
                 timespan=(start_time, end_time),
             )
             if response.status == LogsQueryStatus.SUCCESS and response.tables:
-                tbl = response.tables[0]
-                col_names = [c.name if hasattr(c, "name") else str(c) for c in tbl.columns]
-                results[table] = [dict(zip(col_names, row)) for row in tbl.rows]
+                result_table = response.tables[0]
+                column_names = [
+                    column.name if hasattr(column, "name") else str(column)
+                    for column in result_table.columns
+                ]
+                results[table] = [dict(zip(column_names, row)) for row in result_table.rows]
             else:
                 results[table] = []
-        except HttpResponseError as e:
-            error_code = getattr(e, "error", None)
+        except HttpResponseError as error:
+            error_code = getattr(error, "error", None)
             code_str = str(error_code.code if error_code else "")
-            if "TableNotFound" in code_str or e.status_code == 404:
+            if "TableNotFound" in code_str or error.status_code == 404:
                 results[table] = {"status": "table_not_found"}
-            elif e.status_code in (401, 403):
+            elif error.status_code in (401, 403):
                 results[table] = {"status": "insufficient_permissions"}
             else:
-                results[table] = {"error": str(e.message or e)}
-        except Exception as e:
-            results[table] = {"error": str(e)}
+                results[table] = {"error": str(error.message or error)}
+        except Exception as error:
+            results[table] = {"error": str(error)}
 
     return results
 
 
-def process_storage_account(monitor_client, logs_client, sub_id, sub_name, account):
+def process_storage_account(monitor_client, logs_client, subscription_id, subscription_name, account):
     account_id = account["id"]
     account_name = account["name"]
-    rg = account["resource_group"]
+    resource_group = account["resource_group"]
 
-    print(f"    📦 {account_name} ({rg})")
+    print(f"    {account_name} ({resource_group})")
 
     result = {
-        "subscription_id": sub_id,
-        "subscription_name": sub_name,
+        "subscription_id": subscription_id,
+        "subscription_name": subscription_name,
         "storage_account_id": account_id,
         "storage_account_name": account_name,
-        "resource_group": rg,
+        "resource_group": resource_group,
         "location": account.get("location"),
         "diagnostic_logging_enabled": False,
         "diagnostic_settings": {},
@@ -206,66 +211,60 @@ def process_storage_account(monitor_client, logs_client, sub_id, sub_name, accou
     }
 
     try:
-        # Diagnostic settings (account + sub-resources)
-        print(f"      🔍 Checking diagnostic settings...")
-        diag = collect_all_diagnostic_settings(monitor_client, account_id)
-        result["diagnostic_settings"] = diag
+        print("      Checking diagnostic settings...")
+        diagnostic_settings_data = collect_all_diagnostic_settings(monitor_client, account_id)
+        result["diagnostic_settings"] = diagnostic_settings_data
 
         enabled_count = sum(
-            len(v) for v in diag.values() if isinstance(v, list)
+            len(v) for v in diagnostic_settings_data.values() if isinstance(v, list)
         )
         result["diagnostic_logging_enabled"] = enabled_count > 0
         if enabled_count:
-            print(f"      ✅ {enabled_count} diagnostic setting(s) found")
+            print(f"      {enabled_count} diagnostic setting(s) found.")
         else:
-            print(f"      ℹ️  Diagnostic logging not enabled")
+            print("      Diagnostic logging not enabled.")
 
-        # Activity logs
-        print(f"      🔍 Fetching activity logs...")
-        activity = get_activity_logs(monitor_client, account_id)
-        result["activity_logs"] = activity
-        if isinstance(activity, list):
-            print(f"      ✅ {len(activity)} activity log event(s)")
+        print("      Fetching activity logs...")
+        activity_log_events = get_activity_logs(monitor_client, account_id)
+        result["activity_logs"] = activity_log_events
+        if isinstance(activity_log_events, list):
+            print(f"      {len(activity_log_events)} activity log event(s).")
         else:
-            print(f"      ⚠️  Activity logs: {activity.get('error', 'unknown error')}")
+            print(f"      Activity logs error: {activity_log_events.get('error', 'unknown error')}")
 
-        # Log Analytics queries
-        workspace_ids = extract_workspace_ids(diag)
-        if not workspace_ids and FALLBACK_WORKSPACE_ID:
-            workspace_ids = [FALLBACK_WORKSPACE_ID]
+        workspace_ids = extract_workspace_ids(diagnostic_settings_data)
 
         if workspace_ids:
-            print(f"      🔍 Querying {len(workspace_ids)} Log Analytics workspace(s)...")
-            per_workspace = {}
-            for ws_id in workspace_ids:
-                per_workspace[ws_id] = query_log_analytics(logs_client, ws_id, account_name)
-            result["storage_diagnostic_logs"] = per_workspace
+            print(f"      Querying {len(workspace_ids)} Log Analytics workspace(s)...")
+            workspace_query_results = {}
+            for workspace_id in workspace_ids:
+                workspace_query_results[workspace_id] = query_log_analytics(
+                    logs_client, workspace_id, account_name
+                )
+            result["storage_diagnostic_logs"] = workspace_query_results
 
-            total = sum(
+            total_diagnostic_log_events = sum(
                 len(rows)
-                for ws in per_workspace.values()
-                for rows in ws.values()
+                for workspace_logs in workspace_query_results.values()
+                for rows in workspace_logs.values()
                 if isinstance(rows, list)
             )
-            print(f"      ✅ {total} storage diagnostic log event(s)")
+            print(f"      {total_diagnostic_log_events} storage diagnostic log event(s).")
         else:
             result["storage_diagnostic_logs"] = {
                 "status": "no_log_analytics_workspace_configured"
             }
 
-    except Exception as e:
-        print(f"      ❌ Unexpected error: {e}")
-        result["error"] = str(e)
+    except Exception as error:
+        print(f"      Unexpected error: {error}")
+        result["error"] = str(error)
 
     return result
 
 
 def main():
-    print("🚀 Azure Storage Logs Collector")
-    print("=" * 50)
-
     if not all([TENANT_ID, CLIENT_ID, CLIENT_SECRET]):
-        print("❌ Missing required env vars: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET")
+        print("Missing required environment variables: AZURE_STORAGE_TENANT_ID, AZURE_STORAGE_CLIENT_ID, AZURE_STORAGE_CLIENT_SECRET")
         return
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -277,27 +276,26 @@ def main():
 
     subscriptions = get_subscriptions(credential)
     if not subscriptions:
-        print("⚠️  No accessible subscriptions found.")
+        print("No accessible subscriptions found.")
 
     all_results = []
     total_accounts = 0
     total_log_events = 0
     total_errors = 0
 
-    for sub in subscriptions:
-        sub_id = sub["id"]
-        sub_name = sub["name"]
-        print(f"\n📋 Subscription: {sub_name} ({sub_id})")
+    for subscription in subscriptions:
+        subscription_id = subscription["id"]
+        subscription_name = subscription["name"]
+        print(f"\nSubscription: {subscription_name} ({subscription_id})")
 
-        monitor_client = MonitorManagementClient(credential, sub_id)
-
-        accounts = get_storage_accounts(credential, sub_id)
-        print(f"  ✅ Found {len(accounts)} storage account(s)")
+        monitor_client = MonitorManagementClient(credential, subscription_id)
+        accounts = get_storage_accounts(credential, subscription_id)
+        print(f"  Found {len(accounts)} storage account(s).")
 
         if not accounts:
             all_results.append({
-                "subscription_id": sub_id,
-                "subscription_name": sub_name,
+                "subscription_id": subscription_id,
+                "subscription_name": subscription_name,
                 "status": "no_storage_accounts_found",
             })
             continue
@@ -305,7 +303,7 @@ def main():
         for account in accounts:
             total_accounts += 1
             account_result = process_storage_account(
-                monitor_client, logs_client, sub_id, sub_name, account
+                monitor_client, logs_client, subscription_id, subscription_name, account
             )
             all_results.append(account_result)
 
@@ -315,9 +313,9 @@ def main():
             if isinstance(account_result.get("activity_logs"), list):
                 total_log_events += len(account_result["activity_logs"])
 
-            for ws_logs in account_result.get("storage_diagnostic_logs", {}).values():
-                if isinstance(ws_logs, dict):
-                    for rows in ws_logs.values():
+            for workspace_logs in account_result.get("storage_diagnostic_logs", {}).values():
+                if isinstance(workspace_logs, dict):
+                    for rows in workspace_logs.values():
                         if isinstance(rows, list):
                             total_log_events += len(rows)
 
@@ -332,15 +330,15 @@ def main():
         "storage_accounts": all_results,
     }
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2, default=str)
+    with open(output_file, "w", encoding="utf-8") as output_file_handle:
+        json.dump(output_data, output_file_handle, indent=2, default=str)
 
-    print(f"\n🎉 Done!")
-    print(f"  📊 Subscriptions processed: {len(subscriptions)}")
-    print(f"  📦 Storage accounts processed: {total_accounts}")
-    print(f"  📄 Total log events collected: {total_log_events}")
-    print(f"  ❌ Errors: {total_errors}")
-    print(f"  💾 Output saved to: {output_file}")
+    print(f"\nCompleted.")
+    print(f"  Subscriptions processed:    {len(subscriptions)}")
+    print(f"  Storage accounts processed: {total_accounts}")
+    print(f"  Total log events collected: {total_log_events}")
+    print(f"  Errors:                     {total_errors}")
+    print(f"  Output saved to:            {output_file}")
 
     print("\nGenerating BOM report...")
     generate_bom.main(target_file=output_file)

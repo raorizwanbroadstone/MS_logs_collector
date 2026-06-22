@@ -1,5 +1,5 @@
 {
-  "collectionTime": "2026-06-19T07:36:11.869140+00:00",
+  "collectionTime": "2026-06-22T20:06:03.974420+00:00",
   "summary": {
     "subscriptions_processed": 1,
     "storage_accounts_processed": 3,
@@ -34,12 +34,7 @@
       },
       "activity_logs": [],
       "storage_diagnostic_logs": {
-        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
-          "StorageBlobLogs": [],
-          "StorageFileLogs": [],
-          "StorageQueueLogs": [],
-          "StorageTableLogs": []
-        }
+        "status": "no_log_analytics_workspace_configured"
       },
       "error": null
     },
@@ -70,12 +65,7 @@
       },
       "activity_logs": [],
       "storage_diagnostic_logs": {
-        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
-          "StorageBlobLogs": [],
-          "StorageFileLogs": [],
-          "StorageQueueLogs": [],
-          "StorageTableLogs": []
-        }
+        "status": "no_log_analytics_workspace_configured"
       },
       "error": null
     },
@@ -106,12 +96,7 @@
       },
       "activity_logs": [],
       "storage_diagnostic_logs": {
-        "d0d4e10f-0e11-455d-bd02-86ba33431d44": {
-          "StorageBlobLogs": [],
-          "StorageFileLogs": [],
-          "StorageQueueLogs": [],
-          "StorageTableLogs": []
-        }
+        "status": "no_log_analytics_workspace_configured"
       },
       "error": null
     }
