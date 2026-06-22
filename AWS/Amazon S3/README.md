@@ -1,7 +1,6 @@
 # Amazon S3 — Log Collector & BOM Generator
 
 This module connects to **AWS CloudTrail** via boto3, fetches the last 24 hours of S3 API activity, deduplicates entities using a Bloom filter, and generates a **CycloneDX 1.6 Bill of Materials** report. It is the S3 equivalent of the Amazon Bedrock collector in this repository.
-
 ---
 
 ## Folder Structure
