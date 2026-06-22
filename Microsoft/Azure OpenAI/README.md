@@ -1,176 +1,79 @@
-# Azure OpenAI and ML — Diagnostic Log Collector
+# Azure OpenAI — Diagnostic Log Collector
 
-This module connects to an **Azure Log Analytics Workspace** and runs KQL (Kusto Query Language) queries to retrieve diagnostic logs from Azure Cognitive Services and Azure OpenAI resources. Results are saved as timestamped JSON files for analysis and retention.
+Authenticates with Azure using a Service Principal, connects to a Log Analytics Workspace, and runs a suite of KQL queries to retrieve diagnostic logs from Azure Cognitive Services and Azure OpenAI resources. A CycloneDX 1.6 Bill of Materials report is generated automatically on each run.
 
 ---
 
-## Folder Structure
+## Structure
 
 ```
 Azure OpenAI/
-├── fetch_azure_diagnostic_logs.py    # Main script — queries Log Analytics and writes output
-├── generate_bom.py                   # BOM generator — runs automatically after fetch; outputs CycloneDX 1.6 JSON
-├── logs/                             # Collector output (created automatically on first run)
+├── fetch_azure_diagnostic_logs.py
+├── generate_bom.py
+├── README.md
+├── logs/
 │   └── workspace_test_YYYY-MM-DD_HH-MM-SS.json
-└── report/                           # BOM output (created automatically on first run)
+└── report/
     └── bom_YYYYMMDD_HHMMSS.json
 ```
 
 ---
 
-## Script: `fetch_azure_diagnostic_logs.py`
+## Configuration
 
-### Purpose
-Authenticates with Azure using a Service Principal, connects to a Log Analytics Workspace, executes a suite of diagnostic KQL queries, and saves the results to a JSON file.
+Add the following to the root `.env` file:
 
-### Configuration
-
-These values are read from environment variables (set in the root `.env` file):
+```env
+AZURE_TENANT_ID=<tenant-id>
+AZURE_CLIENT_ID=<client-id>
+AZURE_CLIENT_SECRET=<client-secret>
+AZURE_WORKSPACE_ID=<log-analytics-workspace-id>
+```
 
 | Variable | Description |
-|---|---|
+| --- | --- |
 | `AZURE_TENANT_ID` | Azure Active Directory tenant ID |
 | `AZURE_CLIENT_ID` | Service principal application (client) ID |
 | `AZURE_CLIENT_SECRET` | Service principal client secret |
 | `AZURE_WORKSPACE_ID` | Log Analytics Workspace resource ID |
 
-Two constants control runtime behavior:
+---
 
-```python
-HOURS_BACK = 24                                   # How far back (in hours) to query logs
-OUTPUT_DIR = Path(__file__).parent / "logs"       # Directory for output JSON files
-```
-
-### Authentication
-
-Uses `azure-identity`'s `ClientSecretCredential`:
-
-```python
-credential = ClientSecretCredential(
-    tenant_id=AZURE_TENANT_ID,
-    client_id=AZURE_CLIENT_ID,
-    client_secret=AZURE_CLIENT_SECRET
-)
-```
-
-The credential is passed to `LogsQueryClient` from `azure-monitor-query` to execute workspace queries.
-
-### Functions
-
-#### `get_credential()`
-Instantiates and returns a `ClientSecretCredential` using environment variables. Raises `ValueError` if any required variable is missing.
-
-#### `run_query(client, query, query_name)`
-Executes a single KQL query against the workspace and returns a list of row dictionaries.
-
-- Converts all row values to JSON-serializable Python types (handles `datetime`, `timedelta`, `UUID`, etc.)
-- Returns `[]` on query error, printing the exception
-- Time range is `timedelta(hours=HOURS_BACK)` relative to now
-
-#### `main()`
-Orchestrates the full workflow:
-1. Loads environment variables from `.env`
-2. Creates the Azure credential and `LogsQueryClient`
-3. Runs all four queries (see below)
-4. Writes aggregated results to a timestamped JSON file in `azure_diagnostic_logs/`
-
-### KQL Queries Executed
-
-| Query Name | KQL | Purpose |
-|---|---|---|
-| `Connection_Test` | `print "Connected"` | Confirms workspace connectivity |
-| `Workspace_Time` | `print now()` | Returns current server time from the workspace |
-| `Table_Counts` | `union withsource=TableName *  \| summarize count() by TableName` | Lists all tables and their record counts |
-| `AzureDiagnostics_Sample` | `AzureDiagnostics \| take 10` | Returns up to 10 sample diagnostic records |
-
-### Output Format
-
-Results are written to `logs/workspace_test_YYYY-MM-DD_HH-MM-SS.json`:
-
-```json
-{
-  "timestamp": "2026-06-17T10:04:24.123456",
-  "workspace_id": "<workspace-id>",
-  "hours_back": 24,
-  "queries": {
-    "Connection_Test": [...],
-    "Workspace_Time": [...],
-    "Table_Counts": [...],
-    "AzureDiagnostics_Sample": [...]
-  }
-}
-```
-
-### Running the Script
+## Usage
 
 ```bash
-# From the project root, with venv activated
-cd "Azure OpenAI and ML"
+# Run from the Azure OpenAI directory with the project venv activated
 python fetch_azure_diagnostic_logs.py
 ```
 
-A new timestamped JSON file will appear in `logs/` upon success, followed immediately by a CycloneDX 1.6 BOM written to `report/`.
+Output files are written to `logs/` and `report/` with timestamps in their filenames. `generate_bom.py` can also be run standalone to reprocess all existing files in `logs/`.
 
 ---
 
-## Output Directories
+## How It Works
 
-**`logs/`** — timestamped JSON files from each fetch run, one file per execution.
+`fetch_azure_diagnostic_logs.py` runs the following pipeline:
 
-**`report/`** — CycloneDX 1.6 BOM JSON files generated automatically after each fetch. Can also be regenerated standalone:
+1. Authenticates using `ClientSecretCredential` and creates a `LogsQueryClient`
+2. Executes all four KQL queries against the workspace for the last 24 hours
+3. Writes results to `logs/workspace_test_<timestamp>.json`
+4. Invokes `generate_bom.py` to produce `report/bom_<timestamp>.json`
 
-```bash
-cd "Azure OpenAI"
-python generate_bom.py
-```
+**KQL queries executed:**
 
-Extracted BOM entities:
-
-| Entity | CycloneDX section | Unique key |
-|---|---|---|
-| Cognitive Services / OpenAI resources | `components` (type: application) | Lowercase ARM `_ResourceId` |
-| Resource providers | `services` | Provider name (e.g. `MICROSOFT.COGNITIVESERVICES`) |
-| Log Analytics tables | `services` | Table name (e.g. `AzureDiagnostics`) |
-| Log Analytics workspace | `services` | Workspace ID |
+| Query | Purpose |
+| --- | --- |
+| `Connection_Test` | Confirms workspace connectivity |
+| `Workspace_Time` | Returns current server time from the workspace |
+| `Table_Counts` | Lists all tables and their record counts |
+| `AzureDiagnostics_Sample` | Returns up to 10 sample diagnostic records |
 
 ---
 
-## Azure Resource Context
+## Required Permission
 
-This module targets **Azure Cognitive Services / Azure OpenAI** resources. Diagnostic logs are ingested into the Log Analytics Workspace from resources like:
+The service principal must have the **Log Analytics Reader** role on the Log Analytics Workspace.
 
-```
-/subscriptions/<sub-id>/resourceGroups/<rg>/providers/
-  Microsoft.CognitiveServices/accounts/AOAI-MYCOMPANY-001
-```
-
-### AzureDiagnostics Record Fields
-
-Key fields present in `AzureDiagnostics` records from Cognitive Services:
-
-| Field | Description |
-|---|---|
-| `TenantId` | Log Analytics workspace tenant |
-| `TimeGenerated` | UTC timestamp of the log event |
-| `ResourceId` | Full Azure resource identifier |
-| `Category` | Log category (e.g., `Audit`) |
-| `OperationName` | Operation performed (e.g., `CreateResource`) |
-| `ResultType` | Outcome of the operation |
-| `SubscriptionId` | Azure subscription |
-| `ResourceGroup` | Resource group name |
-| `ResourceProvider` | `MICROSOFT.COGNITIVESERVICES` |
-| `ResourceType` | Resource type within the provider |
-| `ResourceGroup` | Resource group for the resource |
-
----
-
-## Required Azure Permissions
-
-The service principal used must have the following role on the Log Analytics Workspace:
-
-- **Log Analytics Reader** — allows querying workspace data via the API
-
-To assign via Azure CLI:
 ```bash
 az role assignment create \
   --assignee <client-id> \
@@ -182,9 +85,9 @@ az role assignment create \
 
 ## Troubleshooting
 
-| Issue | Likely Cause | Resolution |
-|---|---|---|
-| `ValueError: Missing environment variable` | `.env` not loaded or variable not set | Check `.env` file exists and contains all 4 Azure variables |
-| `AuthenticationError` | Wrong client ID, secret, or tenant | Verify service principal credentials in Azure Portal |
-| Empty `AzureDiagnostics_Sample` results | No logs ingested yet | Enable diagnostic settings on the target Azure resource |
-| `WorkspaceNotFound` | Wrong `AZURE_WORKSPACE_ID` | Confirm the workspace ID in Azure Portal under Log Analytics Workspace > Overview |
+| Issue | Cause | Fix |
+| --- | --- | --- |
+| `AuthenticationError` | Incorrect service principal credentials | Verify the three `AZURE_*` values in `.env` match the app registration |
+| Empty `AzureDiagnostics_Sample` | No logs ingested yet | Enable diagnostic settings on the target Cognitive Services resource |
+| `WorkspaceNotFound` | Incorrect `AZURE_WORKSPACE_ID` | Confirm the workspace ID in Portal → Log Analytics Workspace → Overview |
+| `Table_Counts` is empty | Workspace accessible but no data ingested | Enable diagnostic settings and wait for logs to arrive |

@@ -6,18 +6,17 @@ from azure.identity import ClientSecretCredential
 from azure.monitor.query import LogsQueryClient, LogsQueryStatus
 from dotenv import load_dotenv
 import generate_bom
+
 load_dotenv()
 
 TENANT_ID = os.getenv("AZURE_TENANT_ID")
 CLIENT_ID = os.getenv("AZURE_CLIENT_ID")
 CLIENT_SECRET = os.getenv("AZURE_CLIENT_SECRET")
-
-# Log Analytics Workspace ID 
 WORKSPACE_ID = os.getenv("AZURE_WORKSPACE_ID")
-
 
 HOURS_BACK = 24
 OUTPUT_DIR = Path(__file__).parent / "logs"
+
 
 def get_credential():
     return ClientSecretCredential(
@@ -42,29 +41,19 @@ def run_query(client, query: str, query_name: str):
 
         if response.status == LogsQueryStatus.SUCCESS:
             if not response.tables:
-                print(f"  ⚠️ {query_name}: No tables returned")
+                print(f"  {query_name}: No tables returned.")
                 return []
-
             table = response.tables[0]
-
-            columns = [
-                col.name if hasattr(col, "name") else str(col)
-                for col in table.columns
-            ]
-
-            results = [
-                dict(zip(columns, row))
-                for row in table.rows
-            ]
-
-            print(f"  ✅ {query_name}: {len(results)} records found")
+            columns = [col.name if hasattr(col, "name") else str(col) for col in table.columns]
+            results = [dict(zip(columns, row)) for row in table.rows]
+            print(f"  {query_name}: {len(results)} record(s) found.")
             return results
 
-        print(f"  ❌ {query_name}: Query failed")
+        print(f"  {query_name}: Query failed.")
         return []
 
-    except Exception as e:
-        print(f"  ❌ Error in {query_name}: {e}")
+    except Exception as error:
+        print(f"  Error in {query_name}: {error}")
         return []
 
 
@@ -76,33 +65,25 @@ def main():
 
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
 
-    print("🚀 Testing Log Analytics Workspace...\n")
-
     queries = {
         "Connection_Test": """
             print Message="Connected to Log Analytics Workspace"
         """,
-
         "Workspace_Time": """
             print CurrentTime=now()
         """,
-
         "Table_Counts": """
             search *
             | summarize Count=count() by $table
             | order by Count desc
         """,
-
         "AzureDiagnostics_Sample": """
             AzureDiagnostics
             | take 10
-        """
+        """,
     }
 
-    all_results = {}
-
-    for name, query in queries.items():
-        all_results[name] = run_query(client, query, name)
+    all_results = {name: run_query(client, query, name) for name, query in queries.items()}
 
     output_data = {
         "collectionTime": datetime.now(timezone.utc).isoformat(),
@@ -117,19 +98,16 @@ def main():
 
     output_file = OUTPUT_DIR / f"workspace_test_{timestamp}.json"
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2, default=str)
+    with open(output_file, "w", encoding="utf-8") as output_file_handle:
+        json.dump(output_data, output_file_handle, indent=2, default=str)
 
-    print("\n🎉 Done!")
-    print(f"📄 Output saved to: {output_file}")
+    print(f"\nCompleted. Output saved to: {output_file}")
 
     print("\nGenerating BOM report...")
     generate_bom.main(target_file=output_file.resolve())
 
     if not all_results.get("Table_Counts"):
-        print(
-            "\nℹ️ Workspace is reachable but currently contains no data."
-        )
+        print("\nWorkspace is reachable but currently contains no data.")
 
 
 if __name__ == "__main__":

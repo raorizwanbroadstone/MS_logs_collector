@@ -1,38 +1,19 @@
-"""
-generate_bom.py
-
-Reads Azure OpenAI diagnostic log files from azure_diagnostic_logs/, extracts
-BOM-relevant entities (Cognitive Services resources, resource providers, log
-tables, Log Analytics workspace), deduplicates them with a Bloom filter backed
-by an exact set, and writes a CycloneDX 1.6 BOM JSON report to report/.
-
-Files are small (~11KB each) so each is loaded fully with json.load().
-The Bloom filter + exact set guarantee zero duplicate components across all files.
-
-Dependencies: mmh3, bitarray  (pip install mmh3 bitarray)
-"""
-
 import json
 import math
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-
 import mmh3
 from bitarray import bitarray
 
 SCRIPT_DIR = Path(__file__).parent
-LOGS_DIR   = SCRIPT_DIR / "logs"
+LOGS_DIR = SCRIPT_DIR / "logs"
 REPORT_DIR = SCRIPT_DIR / "report"
 
 BLOOM_CAPACITY = 500_000
-BLOOM_FPR      = 0.0001
+BLOOM_FPR = 0.0001
 
-
-# ---------------------------------------------------------------------------
-# Bloom filter + deduplication layer
-# ---------------------------------------------------------------------------
-
+# Bloom filter and deduplication layer
 class BloomFilter:
     """
     Probabilistic membership structure using MurmurHash3 double-hashing over a
@@ -41,24 +22,24 @@ class BloomFilter:
     """
 
     def __init__(self, capacity: int, fpr: float):
-        m = math.ceil(-(capacity * math.log(fpr)) / (math.log(2) ** 2))
-        k = max(1, round((m / capacity) * math.log(2)))
-        self._m    = m
-        self._k    = k
-        self._bits = bitarray(m)
-        self._bits.setall(0)
+        bit_array_size = math.ceil(-(capacity * math.log(fpr)) / (math.log(2) ** 2))
+        hash_count = max(1, round((bit_array_size / capacity) * math.log(2)))
+        self.bit_array_size = bit_array_size
+        self.hash_count = hash_count
+        self.bits = bitarray(bit_array_size)
+        self.bits.setall(0)
 
-    def _positions(self, key: str) -> list[int]:
-        h1 = mmh3.hash(key, seed=0, signed=False)
-        h2 = mmh3.hash(key, seed=1, signed=False)
-        return [(h1 + i * h2) % self._m for i in range(self._k)]
+    def compute_positions(self, key: str) -> list[int]:
+        primary_hash = mmh3.hash(key, seed=0, signed=False)
+        secondary_hash = mmh3.hash(key, seed=1, signed=False)
+        return [(primary_hash + i * secondary_hash) % self.bit_array_size for i in range(self.hash_count)]
 
     def add(self, key: str) -> None:
-        for p in self._positions(key):
-            self._bits[p] = 1
+        for position in self.compute_positions(key):
+            self.bits[position] = 1
 
     def might_contain(self, key: str) -> bool:
-        return all(self._bits[p] for p in self._positions(key))
+        return all(self.bits[position] for position in self.compute_positions(key))
 
 
 class DeduplicatingSet:
@@ -69,39 +50,33 @@ class DeduplicatingSet:
     """
 
     def __init__(self, capacity: int = BLOOM_CAPACITY, fpr: float = BLOOM_FPR):
-        self._bloom = BloomFilter(capacity, fpr)
-        self._seen: set[str] = set()
+        self.bloom_filter = BloomFilter(capacity, fpr)
+        self.seen_keys: set[str] = set()
 
     def add_if_new(self, key: str) -> bool:
-        """Returns True and records key if it has never been seen; False otherwise."""
-        if self._bloom.might_contain(key) and key in self._seen:
+        """Returns True and records the key if it has never been seen; False otherwise."""
+        if self.bloom_filter.might_contain(key) and key in self.seen_keys:
             return False
-        self._bloom.add(key)
-        self._seen.add(key)
+        self.bloom_filter.add(key)
+        self.seen_keys.add(key)
         return True
 
     def __len__(self) -> int:
-        return len(self._seen)
+        return len(self.seen_keys)
 
 
-# ---------------------------------------------------------------------------
 # File loading
-# ---------------------------------------------------------------------------
-
 def load_log_file(log_file: Path) -> dict:
     """
     Loads the entire JSON file. Azure OpenAI diagnostic files are small (~11KB),
     and their structure requires reading from multiple top-level keys (workspaceId,
     results.AzureDiagnostics_Sample, results.Table_Counts) in one pass.
     """
-    with log_file.open("r", encoding="utf-8") as fh:
-        return json.load(fh)
+    with log_file.open("r", encoding="utf-8") as file_handle:
+        return json.load(file_handle)
 
 
-# ---------------------------------------------------------------------------
 # Entity extractors
-# ---------------------------------------------------------------------------
-
 def extract_cognitive_services_resources(data: dict) -> list[dict]:
     """
     Extracts Cognitive Services / Azure OpenAI resource components from
@@ -137,18 +112,11 @@ def extract_resource_providers(data: dict) -> list[dict]:
     Extracts unique resource providers (e.g., MICROSOFT.COGNITIVESERVICES) from
     AzureDiagnostics_Sample records. Normalised to uppercase for consistency.
     """
-    results = []
-    for record in data.get("results", {}).get("AzureDiagnostics_Sample", []):
-        if not isinstance(record, dict):
-            continue
-        provider = record.get("ResourceProvider", "").upper()
-        if provider:
-            results.append({
-                "kind": "resource_provider",
-                "key":  provider,
-                "name": provider,
-            })
-    return results
+    return [
+        {"kind": "resource_provider", "key": provider, "name": provider}
+        for record in data.get("results", {}).get("AzureDiagnostics_Sample", [])
+        if isinstance(record, dict) and (provider := record.get("ResourceProvider", "").upper())
+    ]
 
 
 def extract_log_tables(data: dict) -> list[dict]:
@@ -156,20 +124,11 @@ def extract_log_tables(data: dict) -> list[dict]:
     Extracts Log Analytics table names from Table_Counts query results.
     Each table is a service that stores diagnostic telemetry in the workspace.
     """
-    results = []
-    for record in data.get("results", {}).get("Table_Counts", []):
-        if not isinstance(record, dict):
-            continue
-        table = record.get("$table", "")
-        count = record.get("Count", 0)
-        if table:
-            results.append({
-                "kind":        "log_table",
-                "key":         table,
-                "name":        table,
-                "record_count": str(count),
-            })
-    return results
+    return [
+        {"kind": "log_table", "key": table_name, "name": table_name, "record_count": str(record.get("Count", 0))}
+        for record in data.get("results", {}).get("Table_Counts", [])
+        if isinstance(record, dict) and (table_name := record.get("$table", ""))
+    ]
 
 
 def extract_workspace(data: dict) -> dict | None:
@@ -188,19 +147,14 @@ def extract_workspace(data: dict) -> dict | None:
     }
 
 
-# ---------------------------------------------------------------------------
 # CycloneDX 1.6 serializers
-# ---------------------------------------------------------------------------
-
-def to_cyclonedx_component(raw: dict) -> dict:
+def to_cyclonedx_component(entity: dict) -> dict:
     """
     Maps a raw cognitive_services_resource dict to a CycloneDX 1.6 component
     (type: application). Azure-specific fields are stored as azure: properties.
     """
-    bom_ref = f"{raw['kind']}-{raw['key']}"
-    props: list[dict] = []
-
-    for field, cdx_name in [
+    bom_ref = f"{entity['kind']}-{entity['key']}"
+    field_map = [
         ("resource_id",       "azure:ResourceId"),
         ("resource_provider", "azure:ResourceProvider"),
         ("resource_type",     "azure:ResourceType"),
@@ -208,42 +162,40 @@ def to_cyclonedx_component(raw: dict) -> dict:
         ("subscription_id",   "azure:SubscriptionId"),
         ("operation_name",    "azure:OperationName"),
         ("category",          "azure:Category"),
-    ]:
-        value = raw.get(field, "")
-        if value:
-            props.append({"name": cdx_name, "value": value})
+    ]
+    properties = [{"name": cdx_name, "value": value} for field, cdx_name in field_map if (value := entity.get(field, ""))]
 
-    comp: dict = {
+    component: dict = {
         "type":    "application",
         "bom-ref": bom_ref,
-        "name":    raw["name"],
+        "name":    entity["name"],
     }
-    if props:
-        comp["properties"] = props
-    return comp
+    if properties:
+        component["properties"] = properties
+    return component
 
 
-def to_cyclonedx_service(raw: dict) -> dict:
+def to_cyclonedx_service(entity: dict) -> dict:
     """
     Maps a raw resource_provider, log_table, or log_analytics_workspace dict
     to a CycloneDX 1.6 service object. authenticated is True for all Azure services.
     """
-    bom_ref = f"{raw['kind']}-{raw['key']}"
-    svc: dict = {
+    bom_ref = f"{entity['kind']}-{entity['key']}"
+    service_entry: dict = {
         "bom-ref":       bom_ref,
-        "name":          raw["name"],
+        "name":          entity["name"],
         "authenticated": True,
     }
 
-    props = []
-    if raw["kind"] == "log_analytics_workspace" and raw.get("ws_id"):
-        props.append({"name": "azure:WorkspaceId", "value": raw["ws_id"]})
-    elif raw["kind"] == "log_table" and raw.get("record_count"):
-        props.append({"name": "azure:RecordCount", "value": raw["record_count"]})
+    properties = []
+    if entity["kind"] == "log_analytics_workspace" and entity.get("ws_id"):
+        properties.append({"name": "azure:WorkspaceId", "value": entity["ws_id"]})
+    elif entity["kind"] == "log_table" and entity.get("record_count"):
+        properties.append({"name": "azure:RecordCount", "value": entity["record_count"]})
 
-    if props:
-        svc["properties"] = props
-    return svc
+    if properties:
+        service_entry["properties"] = properties
+    return service_entry
 
 
 def build_dependency_graph(
@@ -256,33 +208,36 @@ def build_dependency_graph(
     Cognitive Services resources depend on their resource provider.
     Log tables depend on the Log Analytics workspace.
     """
-    service_refs = {r["key"]: f"{r['kind']}-{r['key']}" for r in raw_services}
-    workspace_refs = [f"{r['kind']}-{r['key']}" for r in raw_services if r["kind"] == "log_analytics_workspace"]
+    service_refs = {entity["key"]: f"{entity['kind']}-{entity['key']}" for entity in raw_services}
+    workspace_refs = [
+        f"{entity['kind']}-{entity['key']}"
+        for entity in raw_services
+        if entity["kind"] == "log_analytics_workspace"
+    ]
 
-    deps: list[dict] = [
+    dependencies: list[dict] = [
         {
             "ref":       "root-azure-tenant",
             "dependsOn": list(service_refs.values()),
         }
     ]
 
-    for raw in raw_components:
-        workload = raw.get("workload", "").upper()
-        ref = service_refs.get(workload)
-        if ref:
-            deps.append({
-                "ref":       f"{raw['kind']}-{raw['key']}",
-                "dependsOn": [ref],
+    for entity in raw_components:
+        workload_ref = service_refs.get(entity.get("workload", "").upper())
+        if workload_ref:
+            dependencies.append({
+                "ref":       f"{entity['kind']}-{entity['key']}",
+                "dependsOn": [workload_ref],
             })
 
-    for raw in raw_services:
-        if raw["kind"] == "log_table" and workspace_refs:
-            deps.append({
-                "ref":       f"{raw['kind']}-{raw['key']}",
+    for entity in raw_services:
+        if entity["kind"] == "log_table" and workspace_refs:
+            dependencies.append({
+                "ref":       f"{entity['kind']}-{entity['key']}",
                 "dependsOn": workspace_refs,
             })
 
-    return deps
+    return dependencies
 
 
 def build_cyclonedx_bom(
@@ -322,21 +277,18 @@ def build_cyclonedx_bom(
                 ],
             },
         },
-        "components":   [to_cyclonedx_component(r) for r in raw_components],
-        "services":     [to_cyclonedx_service(r) for r in raw_services],
+        "components":   [to_cyclonedx_component(entity) for entity in raw_components],
+        "services":     [to_cyclonedx_service(entity) for entity in raw_services],
         "dependencies": build_dependency_graph(raw_components, raw_services),
     }
 
 
-# ---------------------------------------------------------------------------
 # Per-file processor
-# ---------------------------------------------------------------------------
-
 def process_log_file(
     log_file: Path,
-    resource_dedup:  DeduplicatingSet,
-    provider_dedup:  DeduplicatingSet,
-    table_dedup:     DeduplicatingSet,
+    cognitive_resource_dedup: DeduplicatingSet,
+    resource_provider_dedup: DeduplicatingSet,
+    log_table_dedup: DeduplicatingSet,
     workspace_dedup: DeduplicatingSet,
 ) -> tuple[list[dict], list[dict], str]:
     """
@@ -346,37 +298,35 @@ def process_log_file(
     """
     data = load_log_file(log_file)
     raw_components: list[dict] = []
-    raw_services:   list[dict] = []
+    raw_services: list[dict] = []
 
-    for res in extract_cognitive_services_resources(data):
-        if resource_dedup.add_if_new(res["key"]):
-            raw_components.append(res)
+    raw_components.extend(
+        entity for entity in extract_cognitive_services_resources(data)
+        if cognitive_resource_dedup.add_if_new(entity["key"])
+    )
+    raw_services.extend(
+        entity for entity in extract_resource_providers(data)
+        if resource_provider_dedup.add_if_new(entity["key"])
+    )
+    raw_services.extend(
+        entity for entity in extract_log_tables(data)
+        if log_table_dedup.add_if_new(entity["key"])
+    )
 
-    for rp in extract_resource_providers(data):
-        if provider_dedup.add_if_new(rp["key"]):
-            raw_services.append(rp)
-
-    for tbl in extract_log_tables(data):
-        if table_dedup.add_if_new(tbl["key"]):
-            raw_services.append(tbl)
-
-    ws = extract_workspace(data)
-    workspace_id = ws["ws_id"] if ws else ""
-    if ws and workspace_dedup.add_if_new(ws["key"]):
-        raw_services.append(ws)
+    workspace_entity = extract_workspace(data)
+    workspace_id = workspace_entity["ws_id"] if workspace_entity else ""
+    if workspace_entity and workspace_dedup.add_if_new(workspace_entity["key"]):
+        raw_services.append(workspace_entity)
 
     return raw_components, raw_services, workspace_id
 
 
-# ---------------------------------------------------------------------------
 # Entry point
-# ---------------------------------------------------------------------------
-
 def main(target_file: Path | None = None) -> None:
     """
     Entry point. Processes target_file if given (called from fetch_azure_diagnostic_logs.py),
-    otherwise processes all JSON files in azure_diagnostic_logs/. Builds a CycloneDX 1.6
-    BOM and writes it to report/.
+    otherwise processes all JSON files in logs/. Builds a CycloneDX 1.6 BOM and writes it
+    to report/.
     """
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -385,35 +335,35 @@ def main(target_file: Path | None = None) -> None:
         print(f"No JSON files found in {LOGS_DIR}")
         return
 
-    resource_dedup  = DeduplicatingSet()
-    provider_dedup  = DeduplicatingSet()
-    table_dedup     = DeduplicatingSet()
+    cognitive_resource_dedup = DeduplicatingSet()
+    resource_provider_dedup = DeduplicatingSet()
+    log_table_dedup = DeduplicatingSet()
     workspace_dedup = DeduplicatingSet()
 
     all_components: list[dict] = []
-    all_services:   list[dict] = []
+    all_services: list[dict] = []
     workspace_id = ""
 
     for log_file in log_files:
         print(f"Processing {log_file.name} ...")
-        comps, svcs, fid = process_log_file(
-            log_file, resource_dedup, provider_dedup, table_dedup, workspace_dedup
+        components, services, first_workspace_id = process_log_file(
+            log_file, cognitive_resource_dedup, resource_provider_dedup, log_table_dedup, workspace_dedup
         )
-        all_components.extend(comps)
-        all_services.extend(svcs)
+        all_components.extend(components)
+        all_services.extend(services)
         if not workspace_id:
-            workspace_id = fid
-        print(f"  {len(comps)} new components, {len(svcs)} new services")
+            workspace_id = first_workspace_id
+        print(f"  {len(components)} new components, {len(services)} new services")
 
-    source_files = ", ".join(f.name for f in log_files)
+    source_files = ", ".join(file.name for file in log_files)
     bom = build_cyclonedx_bom(all_components, all_services, workspace_id, source_files)
 
-    timestamp   = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     output_path = REPORT_DIR / f"bom_{timestamp}.json"
     output_path.write_text(json.dumps(bom, indent=2), encoding="utf-8")
 
-    print(f"\nReport : {output_path}")
-    print(f"Total  : {len(all_components)} components, {len(all_services)} services")
+    print(f"\nBOM report saved to: {output_path}")
+    print(f"Total: {len(all_components)} components, {len(all_services)} services")
 
 
 if __name__ == "__main__":

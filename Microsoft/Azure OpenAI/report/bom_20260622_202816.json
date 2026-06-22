@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:28a0d791-e8c7-443e-a482-0249c651659a",
+  "serialNumber": "urn:uuid:cb8cae81-7e4e-43c6-af05-d3fc3e95a208",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-06-19T07:45:06.813519+00:00",
+    "timestamp": "2026-06-22T20:28:16.413315+00:00",
     "tools": {
       "components": [
         {
@@ -25,7 +25,7 @@
         },
         {
           "name": "azure:SourceFiles",
-          "value": "workspace_test_2026-06-19_07-41-28.json"
+          "value": "workspace_test_2026-06-22_20-28-00.json"
         }
       ]
     }
