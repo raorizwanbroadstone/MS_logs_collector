@@ -17,8 +17,6 @@ load_dotenv()
 TENANT_ID = os.getenv("AZURE_AML_TENANT_ID")
 CLIENT_ID = os.getenv("AZURE_AML_CLIENT_ID")
 CLIENT_SECRET = os.getenv("AZURE_AML_CLIENT_SECRET")
-FALLBACK_WORKSPACE_ID = os.getenv("AZURE_AML_WORKSPACE_ID")
-
 HOURS_BACK = 24
 OUTPUT_DIR = Path(__file__).parent / "logs"
 
@@ -51,17 +49,17 @@ def get_credential():
 
 
 def get_subscriptions(credential):
-    print("  🔍 Listing subscriptions...")
+    print("Listing subscriptions...")
     try:
         client = SubscriptionClient(credential)
-        subs = [
-            {"id": s.subscription_id, "name": s.display_name}
-            for s in client.subscriptions.list()
+        subscription_list = [
+            {"id": subscription.subscription_id, "name": subscription.display_name}
+            for subscription in client.subscriptions.list()
         ]
-        print(f"  ✅ Found {len(subs)} subscription(s)")
-        return subs
-    except Exception as e:
-        print(f"  ❌ Error listing subscriptions: {e}")
+        print(f"  Found {len(subscription_list)} subscription(s).")
+        return subscription_list
+    except Exception as error:
+        print(f"  Error listing subscriptions: {error}")
         return []
 
 
@@ -73,43 +71,47 @@ def get_aml_workspaces(credential, subscription_id):
             filter="resourceType eq 'Microsoft.MachineLearningServices/workspaces'"
         ):
             parts = resource.id.split("/")
-            rg = parts[parts.index("resourceGroups") + 1] if "resourceGroups" in parts else "unknown"
+            resource_group = (
+                parts[parts.index("resourceGroups") + 1]
+                if "resourceGroups" in parts
+                else "unknown"
+            )
             workspaces.append({
                 "id": resource.id,
                 "name": resource.name,
                 "location": resource.location,
-                "resource_group": rg,
+                "resource_group": resource_group,
                 "subscription_id": subscription_id,
             })
         return workspaces
-    except HttpResponseError as e:
-        print(f"    ⚠️  Cannot list AML workspaces (HTTP {e.status_code}): {e.message}")
+    except HttpResponseError as error:
+        print(f"    Cannot list AML workspaces (HTTP {error.status_code}): {error.message}")
         return []
-    except Exception as e:
-        print(f"    ⚠️  Cannot list AML workspaces: {e}")
+    except Exception as error:
+        print(f"    Cannot list AML workspaces: {error}")
         return []
 
 
 def get_diagnostic_settings(monitor_client, resource_uri):
     try:
         settings = list(monitor_client.diagnostic_settings.list(resource_uri=resource_uri))
-        return [s.as_dict() for s in settings]
-    except HttpResponseError as e:
-        if e.status_code in (401, 403):
-            return {"error": "insufficient_permissions", "detail": str(e.message)}
-        return {"error": str(e.message or e)}
-    except Exception as e:
-        return {"error": str(e)}
+        return [setting.as_dict() for setting in settings]
+    except HttpResponseError as error:
+        if error.status_code in (401, 403):
+            return {"error": "insufficient_permissions", "detail": str(error.message)}
+        return {"error": str(error.message or error)}
+    except Exception as error:
+        return {"error": str(error)}
 
 
-def extract_workspace_ids(diag_settings):
+def extract_workspace_ids(diagnostic_settings):
     workspace_ids = []
-    if not isinstance(diag_settings, list):
+    if not isinstance(diagnostic_settings, list):
         return workspace_ids
-    for setting in diag_settings:
-        ws_id = setting.get("workspace_id")
-        if ws_id and ws_id not in workspace_ids:
-            workspace_ids.append(ws_id)
+    for setting in diagnostic_settings:
+        workspace_id = setting.get("workspace_id")
+        if workspace_id and workspace_id not in workspace_ids:
+            workspace_ids.append(workspace_id)
     return workspace_ids
 
 
@@ -121,13 +123,13 @@ def get_activity_logs(monitor_client, resource_id):
     )
     try:
         events = list(monitor_client.activity_logs.list(filter=filter_str))
-        return [e.as_dict() for e in events]
-    except HttpResponseError as e:
-        if e.status_code in (401, 403):
-            return {"error": "insufficient_permissions", "detail": str(e.message)}
-        return {"error": str(e.message or e)}
-    except Exception as e:
-        return {"error": str(e)}
+        return [event_record.as_dict() for event_record in events]
+    except HttpResponseError as error:
+        if error.status_code in (401, 403):
+            return {"error": "insufficient_permissions", "detail": str(error.message)}
+        return {"error": str(error.message or error)}
+    except Exception as error:
+        return {"error": str(error)}
 
 
 def query_aml_log_tables(logs_client, workspace_id):
@@ -149,22 +151,25 @@ def query_aml_log_tables(logs_client, workspace_id):
                 timespan=(start_time, end_time),
             )
             if response.status == LogsQueryStatus.SUCCESS and response.tables:
-                tbl = response.tables[0]
-                col_names = [c.name if hasattr(c, "name") else str(c) for c in tbl.columns]
-                results[table] = [dict(zip(col_names, row)) for row in tbl.rows]
+                result_table = response.tables[0]
+                column_names = [
+                    column.name if hasattr(column, "name") else str(column)
+                    for column in result_table.columns
+                ]
+                results[table] = [dict(zip(column_names, row)) for row in result_table.rows]
             else:
                 results[table] = []
-        except HttpResponseError as e:
-            error_code = getattr(e, "error", None)
+        except HttpResponseError as error:
+            error_code = getattr(error, "error", None)
             code_str = str(error_code.code if error_code else "")
-            if "TableNotFound" in code_str or e.status_code == 404:
+            if "TableNotFound" in code_str or error.status_code == 404:
                 results[table] = {"status": "table_not_found"}
-            elif e.status_code in (401, 403):
+            elif error.status_code in (401, 403):
                 results[table] = {"status": "insufficient_permissions"}
             else:
-                results[table] = {"error": str(e.message or e)}
-        except Exception as e:
-            results[table] = {"error": str(e)}
+                results[table] = {"error": str(error.message or error)}
+        except Exception as error:
+            results[table] = {"error": str(error)}
 
     return results
 
@@ -178,119 +183,114 @@ def get_aml_assets(credential, subscription_id, resource_group, workspace_name):
         ml_client = MLClient(credential, subscription_id, resource_group, workspace_name)
         assets = {}
 
-        # Registered models — core AIBom artifact
         try:
-            models = list(ml_client.models.list())
+            model_list = list(ml_client.models.list())
             assets["models"] = [
                 {
-                    "name": m.name,
-                    "version": m.version,
-                    "type": str(m.type) if hasattr(m, "type") else None,
-                    "description": getattr(m, "description", None),
-                    "tags": getattr(m, "tags", {}),
+                    "name": model.name,
+                    "version": model.version,
+                    "type": str(model.type) if hasattr(model, "type") else None,
+                    "description": getattr(model, "description", None),
+                    "tags": getattr(model, "tags", {}),
                     "creation_context": (
-                        m.creation_context.as_dict()
-                        if hasattr(m, "creation_context") and m.creation_context
+                        model.creation_context.as_dict()
+                        if hasattr(model, "creation_context") and model.creation_context
                         else None
                     ),
                 }
-                for m in models
+                for model in model_list
             ]
-            print(f"        ✅ {len(assets['models'])} model(s)")
-        except Exception as e:
-            assets["models"] = {"error": str(e)}
+            print(f"        {len(assets['models'])} model(s)")
+        except Exception as error:
+            assets["models"] = {"error": str(error)}
 
-        # Training / pipeline jobs
         try:
-            jobs = list(ml_client.jobs.list())
+            job_list = list(ml_client.jobs.list())
             assets["jobs"] = [
                 {
-                    "name": j.name,
-                    "display_name": getattr(j, "display_name", None),
-                    "status": str(j.status) if hasattr(j, "status") else None,
-                    "type": str(j.type) if hasattr(j, "type") else None,
-                    "tags": getattr(j, "tags", {}),
+                    "name": job.name,
+                    "display_name": getattr(job, "display_name", None),
+                    "status": str(job.status) if hasattr(job, "status") else None,
+                    "type": str(job.type) if hasattr(job, "type") else None,
+                    "tags": getattr(job, "tags", {}),
                     "creation_context": (
-                        j.creation_context.as_dict()
-                        if hasattr(j, "creation_context") and j.creation_context
+                        job.creation_context.as_dict()
+                        if hasattr(job, "creation_context") and job.creation_context
                         else None
                     ),
                 }
-                for j in jobs
+                for job in job_list
             ]
-            print(f"        ✅ {len(assets['jobs'])} job(s)")
-        except Exception as e:
-            assets["jobs"] = {"error": str(e)}
+            print(f"        {len(assets['jobs'])} job(s)")
+        except Exception as error:
+            assets["jobs"] = {"error": str(error)}
 
-        # Online inference endpoints
         try:
-            endpoints = list(ml_client.online_endpoints.list())
+            endpoint_list = list(ml_client.online_endpoints.list())
             assets["online_endpoints"] = [
                 {
-                    "name": ep.name,
-                    "provisioning_state": str(ep.provisioning_state) if hasattr(ep, "provisioning_state") else None,
-                    "scoring_uri": getattr(ep, "scoring_uri", None),
-                    "auth_mode": str(ep.auth_mode) if hasattr(ep, "auth_mode") else None,
-                    "tags": getattr(ep, "tags", {}),
+                    "name": endpoint.name,
+                    "provisioning_state": str(endpoint.provisioning_state) if hasattr(endpoint, "provisioning_state") else None,
+                    "scoring_uri": getattr(endpoint, "scoring_uri", None),
+                    "auth_mode": str(endpoint.auth_mode) if hasattr(endpoint, "auth_mode") else None,
+                    "tags": getattr(endpoint, "tags", {}),
                 }
-                for ep in endpoints
+                for endpoint in endpoint_list
             ]
-            print(f"        ✅ {len(assets['online_endpoints'])} online endpoint(s)")
-        except Exception as e:
-            assets["online_endpoints"] = {"error": str(e)}
+            print(f"        {len(assets['online_endpoints'])} online endpoint(s)")
+        except Exception as error:
+            assets["online_endpoints"] = {"error": str(error)}
 
-        # Compute clusters / instances
         try:
-            computes = list(ml_client.compute.list())
+            compute_list = list(ml_client.compute.list())
             assets["compute"] = [
                 {
-                    "name": c.name,
-                    "type": str(c.type) if hasattr(c, "type") else None,
-                    "provisioning_state": str(c.provisioning_state) if hasattr(c, "provisioning_state") else None,
-                    "location": getattr(c, "location", None),
+                    "name": compute_resource.name,
+                    "type": str(compute_resource.type) if hasattr(compute_resource, "type") else None,
+                    "provisioning_state": str(compute_resource.provisioning_state) if hasattr(compute_resource, "provisioning_state") else None,
+                    "location": getattr(compute_resource, "location", None),
                 }
-                for c in computes
+                for compute_resource in compute_list
             ]
-            print(f"        ✅ {len(assets['compute'])} compute resource(s)")
-        except Exception as e:
-            assets["compute"] = {"error": str(e)}
+            print(f"        {len(assets['compute'])} compute resource(s)")
+        except Exception as error:
+            assets["compute"] = {"error": str(error)}
 
-        # Data assets
         try:
-            data_assets = list(ml_client.data.list())
+            data_asset_list = list(ml_client.data.list())
             assets["data_assets"] = [
                 {
-                    "name": d.name,
-                    "version": d.version,
-                    "type": str(d.type) if hasattr(d, "type") else None,
-                    "path": getattr(d, "path", None),
-                    "tags": getattr(d, "tags", {}),
+                    "name": data_asset.name,
+                    "version": data_asset.version,
+                    "type": str(data_asset.type) if hasattr(data_asset, "type") else None,
+                    "path": getattr(data_asset, "path", None),
+                    "tags": getattr(data_asset, "tags", {}),
                 }
-                for d in data_assets
+                for data_asset in data_asset_list
             ]
-            print(f"        ✅ {len(assets['data_assets'])} data asset(s)")
-        except Exception as e:
-            assets["data_assets"] = {"error": str(e)}
+            print(f"        {len(assets['data_assets'])} data asset(s)")
+        except Exception as error:
+            assets["data_assets"] = {"error": str(error)}
 
         return assets
 
-    except Exception as e:
-        return {"error": str(e)}
+    except Exception as error:
+        return {"error": str(error)}
 
 
 def process_workspace(monitor_client, logs_client, credential, workspace):
-    sub_id = workspace["subscription_id"]
-    ws_resource_id = workspace["id"]
-    ws_name = workspace["name"]
-    rg = workspace["resource_group"]
+    subscription_id = workspace["subscription_id"]
+    workspace_resource_id = workspace["id"]
+    workspace_name = workspace["name"]
+    resource_group = workspace["resource_group"]
 
-    print(f"    🧠 {ws_name} ({rg})")
+    print(f"    {workspace_name} ({resource_group})")
 
     result = {
-        "subscription_id": sub_id,
-        "workspace_resource_id": ws_resource_id,
-        "workspace_name": ws_name,
-        "resource_group": rg,
+        "subscription_id": subscription_id,
+        "workspace_resource_id": workspace_resource_id,
+        "workspace_name": workspace_name,
+        "resource_group": resource_group,
         "location": workspace.get("location"),
         "diagnostic_settings": {},
         "activity_logs": [],
@@ -300,60 +300,63 @@ def process_workspace(monitor_client, logs_client, credential, workspace):
     }
 
     try:
-        print(f"      🔍 Checking diagnostic settings...")
-        diag = get_diagnostic_settings(monitor_client, ws_resource_id)
-        result["diagnostic_settings"] = diag
+        print("      Checking diagnostic settings...")
+        diagnostic_settings_data = get_diagnostic_settings(monitor_client, workspace_resource_id)
+        result["diagnostic_settings"] = diagnostic_settings_data
 
-        print(f"      🔍 Fetching activity logs...")
-        activity = get_activity_logs(monitor_client, ws_resource_id)
-        result["activity_logs"] = activity
-        if isinstance(activity, list):
-            print(f"      ✅ {len(activity)} activity log event(s)")
+        print("      Fetching activity logs...")
+        activity_log_events = get_activity_logs(monitor_client, workspace_resource_id)
+        result["activity_logs"] = activity_log_events
+        if isinstance(activity_log_events, list):
+            print(f"      {len(activity_log_events)} activity log event(s).")
         else:
-            print(f"      ⚠️  Activity logs: {activity.get('error', 'unknown')}")
+            print(f"      Activity logs error: {activity_log_events.get('error', 'unknown')}")
 
-        workspace_ids = extract_workspace_ids(diag) if isinstance(diag, list) else []
-        if not workspace_ids and FALLBACK_WORKSPACE_ID:
-            workspace_ids = [FALLBACK_WORKSPACE_ID]
+        workspace_ids = (
+            extract_workspace_ids(diagnostic_settings_data)
+            if isinstance(diagnostic_settings_data, list)
+            else []
+        )
 
         if workspace_ids:
-            print(f"      🔍 Querying AML log tables in {len(workspace_ids)} workspace(s)...")
-            per_workspace = {}
-            for la_ws_id in workspace_ids:
-                per_workspace[la_ws_id] = query_aml_log_tables(logs_client, la_ws_id)
-            result["aml_log_tables"] = per_workspace
+            print(f"      Querying AML log tables in {len(workspace_ids)} workspace(s)...")
+            workspace_query_results = {}
+            for log_analytics_workspace_id in workspace_ids:
+                workspace_query_results[log_analytics_workspace_id] = query_aml_log_tables(
+                    logs_client, log_analytics_workspace_id
+                )
+            result["aml_log_tables"] = workspace_query_results
 
-            total = sum(
+            total_log_events = sum(
                 len(rows)
-                for ws_logs in per_workspace.values()
-                for rows in ws_logs.values()
+                for workspace_logs in workspace_query_results.values()
+                for rows in workspace_logs.values()
                 if isinstance(rows, list)
             )
-            print(f"      ✅ {total} AML log event(s)")
+            print(f"      {total_log_events} AML log event(s).")
         else:
             result["aml_log_tables"] = {"status": "no_log_analytics_workspace_configured"}
 
-        print(f"      🔍 Listing AML assets (models, jobs, endpoints, compute, data)...")
-        result["assets"] = get_aml_assets(credential, sub_id, rg, ws_name)
+        print("      Listing AML assets (models, jobs, endpoints, compute, data)...")
+        result["assets"] = get_aml_assets(
+            credential, subscription_id, resource_group, workspace_name
+        )
 
-    except Exception as e:
-        print(f"      ❌ Unexpected error: {e}")
-        result["error"] = str(e)
+    except Exception as error:
+        print(f"      Unexpected error: {error}")
+        result["error"] = str(error)
 
     return result
 
 
 def main():
-    print("🚀 Azure Machine Learning Logs Collector")
-    print("=" * 50)
-
     if not all([TENANT_ID, CLIENT_ID, CLIENT_SECRET]):
-        print("❌ Missing required env vars: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET")
+        print("Missing required environment variables: AZURE_AML_TENANT_ID, AZURE_AML_CLIENT_ID, AZURE_AML_CLIENT_SECRET")
         return
 
     if not AML_SDK_AVAILABLE:
-        print("⚠️  azure-ai-ml not installed — asset inventory will be skipped.")
-        print("    Install with: pip install azure-ai-ml")
+        print("azure-ai-ml not installed — asset inventory will be skipped.")
+        print("Install with: pip install azure-ai-ml")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
@@ -364,35 +367,35 @@ def main():
 
     subscriptions = get_subscriptions(credential)
     if not subscriptions:
-        print("⚠️  No accessible subscriptions found.")
+        print("No accessible subscriptions found.")
 
     all_results = []
     total_workspaces = 0
     total_errors = 0
 
-    for sub in subscriptions:
-        sub_id = sub["id"]
-        sub_name = sub["name"]
-        print(f"\n📋 Subscription: {sub_name} ({sub_id})")
+    for subscription in subscriptions:
+        subscription_id = subscription["id"]
+        subscription_name = subscription["name"]
+        print(f"\nSubscription: {subscription_name} ({subscription_id})")
 
-        monitor_client = MonitorManagementClient(credential, sub_id)
-        workspaces = get_aml_workspaces(credential, sub_id)
-        print(f"  ✅ Found {len(workspaces)} AML workspace(s)")
+        monitor_client = MonitorManagementClient(credential, subscription_id)
+        workspaces = get_aml_workspaces(credential, subscription_id)
+        print(f"  Found {len(workspaces)} AML workspace(s).")
 
         if not workspaces:
             all_results.append({
-                "subscription_id": sub_id,
-                "subscription_name": sub_name,
+                "subscription_id": subscription_id,
+                "subscription_name": subscription_name,
                 "status": "no_aml_workspaces_found",
             })
             continue
 
-        for ws in workspaces:
+        for workspace in workspaces:
             total_workspaces += 1
-            ws_result = process_workspace(monitor_client, logs_client, credential, ws)
-            ws_result["subscription_name"] = sub_name
-            all_results.append(ws_result)
-            if ws_result.get("error"):
+            workspace_result = process_workspace(monitor_client, logs_client, credential, workspace)
+            workspace_result["subscription_name"] = subscription_name
+            all_results.append(workspace_result)
+            if workspace_result.get("error"):
                 total_errors += 1
 
     output_data = {
@@ -406,14 +409,14 @@ def main():
         "workspaces": all_results,
     }
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2, default=str)
+    with open(output_file, "w", encoding="utf-8") as output_file_handle:
+        json.dump(output_data, output_file_handle, indent=2, default=str)
 
-    print(f"\n🎉 Done!")
-    print(f"  📊 Subscriptions processed: {len(subscriptions)}")
-    print(f"  🧠 AML workspaces processed: {total_workspaces}")
-    print(f"  ❌ Errors: {total_errors}")
-    print(f"  💾 Output saved to: {output_file}")
+    print(f"\nCompleted.")
+    print(f"  Subscriptions processed:  {len(subscriptions)}")
+    print(f"  AML workspaces processed: {total_workspaces}")
+    print(f"  Errors:                   {total_errors}")
+    print(f"  Output saved to:          {output_file}")
 
     print("\nGenerating BOM report...")
     generate_bom.main(target_file=output_file)

@@ -1,200 +1,107 @@
-# Azure Machine Learning Logs Collector
+# Azure Machine Learning — Log Collector
 
-This module collects operational and inventory data from Azure Machine Learning environments. It authenticates to Azure using a Service Principal, discovers Azure ML workspaces across accessible subscriptions, retrieves activity logs and diagnostic settings, queries Log Analytics for Azure ML events, and inventories AI-related assets such as models, jobs, endpoints, compute resources, and data assets.
+Authenticates with Azure using a Service Principal, discovers Azure Machine Learning workspaces across all accessible subscriptions, and collects diagnostic settings, activity logs, AML Log Analytics table events, and a full asset inventory (models, jobs, endpoints, compute, data assets) via the `azure-ai-ml` SDK. A CycloneDX 1.6 Bill of Materials report is generated automatically on each run.
 
 ---
 
-## Folder Structure
+## Structure
 
-```text
+```
 Azure Machine Learning/
-├── fetch_aml_logs.py              # Main script — collects logs and triggers BOM generation
-├── generate_bom.py                # BOM generator — runs automatically after fetch; outputs CycloneDX 1.6 JSON
-├── .env                           # Azure credentials and configuration
-├── logs/                          # Collector output (created automatically on first run)
+├── fetch_aml_logs.py
+├── generate_bom.py
+├── README.md
+├── logs/
 │   └── azure_ml_YYYY-MM-DD_HH-MM-SS.json
-└── report/                        # BOM output (created automatically on first run)
+└── report/
     └── bom_YYYYMMDD_HHMMSS.json
 ```
 
 ---
 
-## Script: `fetch_aml_logs.py`
-
-### Purpose
-
-The script performs the following tasks:
-
-* Discovers Azure Machine Learning workspaces
-* Retrieves workspace Diagnostic Settings
-* Collects Azure Activity Logs
-* Queries Azure ML Log Analytics tables
-* Inventories Azure ML assets:
-
-  * Models
-  * Jobs
-  * Online Endpoints
-  * Compute Resources
-  * Data Assets
-* Exports all collected information to a timestamped JSON file
-
----
-
 ## Configuration
 
-The script reads Azure credentials from a `.env` file:
+Add the following to the root `.env` file:
 
-| Variable              | Description                                  |
-| --------------------- | -------------------------------------------- |
-| `AZURE_TENANT_ID`     | Azure Active Directory Tenant ID             |
-| `AZURE_CLIENT_ID`     | Service Principal Client ID                  |
-| `AZURE_CLIENT_SECRET` | Service Principal Secret                     |
-| `AZURE_WORKSPACE_ID`  | Optional fallback Log Analytics Workspace ID |
-
-Runtime configuration:
-
-```python
-HOURS_BACK = 24
-OUTPUT_DIR = Path(__file__).parent / "logs"
+```env
+AZURE_AML_TENANT_ID=<tenant-id>
+AZURE_AML_CLIENT_ID=<client-id>
+AZURE_AML_CLIENT_SECRET=<client-secret>
 ```
+
+| Variable | Description |
+| --- | --- |
+| `AZURE_AML_TENANT_ID` | Azure Active Directory tenant ID |
+| `AZURE_AML_CLIENT_ID` | Service principal application (client) ID |
+| `AZURE_AML_CLIENT_SECRET` | Service principal client secret |
 
 ---
 
-## Authentication
-
-Authentication is performed using Azure Service Principal credentials via `ClientSecretCredential`:
-
-```python
-credential = ClientSecretCredential(
-    tenant_id=AZURE_TENANT_ID,
-    client_id=AZURE_CLIENT_ID,
-    client_secret=AZURE_CLIENT_SECRET
-)
-```
-
-The credential is used to access:
-
-* Azure Resource Manager
-* Azure Monitor
-* Log Analytics
-* Azure Machine Learning
-
----
-
-## Azure ML Log Tables Queried
-
-The collector attempts to retrieve events from the following AML diagnostic tables:
-
-| Table                      | Description                              |
-| -------------------------- | ---------------------------------------- |
-| `AmlComputeJobEvents`      | Compute job activity                     |
-| `AmlComputeClusterEvents`  | Cluster lifecycle events                 |
-| `AmlComputeInstanceEvents` | Compute instance activity                |
-| `AmlRunStatusChangedEvent` | Training and pipeline run status changes |
-| `AmlDataSetEvent`          | Dataset operations                       |
-| `AmlModelEvent`            | Model registration and updates           |
-| `AmlDeploymentEvent`       | Endpoint deployment events               |
-| `AmlInferencingEvent`      | Inference and scoring activity           |
-
----
-
-## Output Format
-
-Results are written to:
-
-```text
-logs/azure_ml_YYYY-MM-DD_HH-MM-SS.json
-```
-
-Example structure:
-
-```json
-{
-  "collectionTime": "2026-06-17T10:00:00Z",
-  "summary": {
-    "subscriptions_processed": 1,
-    "workspaces_processed": 1,
-    "errors": 0
-  },
-  "workspaces": [
-    {
-      "workspace_name": "demo-workspace",
-      "activity_logs": [],
-      "diagnostic_settings": [],
-      "aml_log_tables": {},
-      "assets": {}
-    }
-  ]
-}
-```
-
----
-
-## Script: `generate_bom.py`
-
-Runs automatically after each fetch. Streams the freshly written log file, extracts BOM-relevant entities, deduplicates them with a Bloom filter backed by an exact set (zero duplicates guaranteed), and writes a CycloneDX 1.6 BOM JSON to `report/`.
-
-Can also be run standalone:
+## Usage
 
 ```bash
-cd "Azure Machine Learning"
-python generate_bom.py
+# Run from the Azure Machine Learning directory with the project venv activated
+python fetch_aml_logs.py
 ```
 
-Extracted BOM entities:
-
-| Entity | CycloneDX section | Type | Unique key |
-|---|---|---|---|
-| AML workspaces | `components` | application | Lowercase ARM `workspace_resource_id` |
-| Registered ML models | `components` | library | `workspace_resource_id/models/name/version` |
-| Compute clusters / instances | `components` | machine | `workspace_resource_id/compute/name` |
-| Data assets | `components` | file | `workspace_resource_id/data/name/version` |
-| Client applications (OAuth2) | `components` | application | `claims.appid` |
-| Azure resource providers | `services` | — | Provider name lowercased |
-| Online inference endpoints | `services` | — | `workspace_resource_id/endpoints/name` |
-| Log Analytics workspaces | `services` | — | Workspace ID |
+Output files are written to `logs/` and `report/` with timestamps in their filenames. `generate_bom.py` can also be run standalone to reprocess all existing files in `logs/`.
 
 ---
 
-## Azure Resource Context
+## How It Works
 
-This collector targets Azure Machine Learning resources:
+`fetch_aml_logs.py` runs the following pipeline per subscription:
 
-```text
-/subscriptions/<subscription-id>
-  /resourceGroups/<resource-group>
-  /providers/Microsoft.MachineLearningServices
-  /workspaces/<workspace-name>
-```
+1. Lists all AML workspaces via `ResourceManagementClient`
+2. Reads diagnostic settings and activity logs via `MonitorManagementClient`
+3. Queries all AML Log Analytics tables in each discovered workspace
+4. Inventories assets (models, jobs, endpoints, compute, data assets) via `MLClient`
+5. Writes results to `logs/azure_ml_<timestamp>.json`
+6. Invokes `generate_bom.py` to produce `report/bom_<timestamp>.json`
 
-The script can optionally query a connected Log Analytics Workspace where AML diagnostic logs are being ingested.
+**AML Log Analytics tables queried:**
 
----
+| Table | Events captured |
+| --- | --- |
+| `AmlComputeJobEvents` | Compute job activity |
+| `AmlComputeClusterEvents` | Cluster lifecycle events |
+| `AmlComputeInstanceEvents` | Compute instance activity |
+| `AmlRunStatusChangedEvent` | Training and pipeline run status changes |
+| `AmlDataSetEvent` | Dataset operations |
+| `AmlModelEvent` | Model registration and updates |
+| `AmlDeploymentEvent` | Endpoint deployment events |
+| `AmlInferencingEvent` | Inference and scoring activity |
 
-## Required Azure Permissions
+**Asset inventory** (requires `azure-ai-ml`):
 
-The Service Principal should have access to:
-
-* Reader
-* Monitoring Reader
-* Log Analytics Reader
-* Azure Machine Learning Workspace Reader
-
-These permissions allow the collector to discover resources and query monitoring data without modifying any Azure assets.
-
----
-
-## Use Cases
-
-* AI Bill of Materials (AIBOM) generation
-* AI asset inventory
-* Model governance
-* Security assessments
-* Compliance auditing
-* Azure ML environment visibility
+| Asset | Description |
+| --- | --- |
+| Models | Registered ML models with version and type |
+| Jobs | Training and pipeline job history |
+| Online endpoints | Deployed inference endpoints with scoring URIs |
+| Compute | Clusters and instances with provisioning state |
+| Data assets | Versioned datasets registered in the workspace |
 
 ---
 
-## Notes
+## Required Permissions
 
-The collector performs read-only operations and does not create, modify, or delete Azure resources. All collected data is exported as JSON for further analysis and reporting.
+| Resource | Role |
+| --- | --- |
+| Subscription | Reader |
+| AML workspace | Reader |
+| Log Analytics workspace | Log Analytics Reader |
+| AML workspace (assets) | AzureML Data Scientist or Reader |
+
+---
+
+## Troubleshooting
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| `Found 0 subscription(s)` | SP has no role at subscription level | Assign Reader on the subscription in IAM |
+| `Cannot list AML workspaces` | SP lacks Reader on the subscription | Assign Reader at subscription or resource group scope |
+| AML log tables all `table_not_found` | Diagnostic settings not configured | Enable diagnostic settings on the AML workspace and point them to a Log Analytics workspace |
+| `assets` section empty or missing | `azure-ai-ml` not installed | Run `pip install azure-ai-ml` |
+| `AuthenticationError` | Incorrect credentials in `.env` | Verify the three `AZURE_AML_*` values match the app registration |
+| `no_log_analytics_workspace_configured` | No diagnostic settings point to Log Analytics | Add diagnostic settings on the AML workspace in Azure Portal |

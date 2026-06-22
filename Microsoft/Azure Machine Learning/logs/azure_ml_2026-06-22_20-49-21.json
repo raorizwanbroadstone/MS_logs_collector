@@ -1,0 +1,30 @@
+{
+  "collectionTime": "2026-06-22T20:49:29.878397+00:00",
+  "aml_sdk_available": false,
+  "summary": {
+    "subscriptions_processed": 1,
+    "workspaces_processed": 1,
+    "errors": 0
+  },
+  "workspaces": [
+    {
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "workspace_resource_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.MachineLearningServices/workspaces/aibom-demo",
+      "workspace_name": "aibom-demo",
+      "resource_group": "logs-test-rg",
+      "location": "eastus",
+      "diagnostic_settings": {
+        "error": "'MonitorManagementClient' object has no attribute 'diagnostic_settings'"
+      },
+      "activity_logs": [],
+      "aml_log_tables": {
+        "status": "no_log_analytics_workspace_configured"
+      },
+      "assets": {
+        "status": "azure-ai-ml package not installed \u2014 run: pip install azure-ai-ml"
+      },
+      "error": null,
+      "subscription_name": "Azure subscription 1"
+    }
+  ]
+}
