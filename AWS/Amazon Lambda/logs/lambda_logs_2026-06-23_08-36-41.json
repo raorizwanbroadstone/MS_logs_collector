@@ -1,0 +1,4506 @@
+[
+  {
+    "EventId": "65e26233-9cc4-4126-be24-49350bd24e20",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T13:32:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY6ZT7535D",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T08:32:20Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "af9a72a3-80af-4317-a1cc-b7c7c99d1094",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T13:32:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY6ZT7535D",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T08:32:20Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "e9f662bf-64dd-41e3-b694-5324e9af8e5a",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T13:32:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY6ZT7535D",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T08:32:20Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0d2458d9-9f2b-4f1d-828c-65b3dbbb2ea7",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:31:49+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "e538ee93-f725-4e1e-b881-b558e373044b",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:31:23+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7de30a2c-b1ad-3b85-adca-7d0c68869475",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:31:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AWSService",
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "qualifier": "$LATEST"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "2750cb4a-933a-4af7-858b-57a2cf0eeacd",
+    "EventName": "UpdateFunctionCode20150331v2",
+    "EventTime": "2026-06-23T13:31:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::Lambda::Function",
+        "ResourceName": "lambda-bom-demo"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY3LZA7RH7",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "publish": false,
+      "dryRun": false
+    },
+    "responseElements": {
+      "functionName": "lambda-bom-demo",
+      "functionArn": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "codeSize": 272,
+      "description": "",
+      "timeout": 3,
+      "memorySize": 128,
+      "lastModified": "2026-06-23T08:31:19.000+0000",
+      "codeSha256": "rO8DGfKT+9HndlmOxCBOf4iV7eQxgS0ofgY84gP7IAA=",
+      "version": "$LATEST",
+      "environment": {},
+      "tracingConfig": {
+        "mode": "PassThrough"
+      },
+      "revisionId": "72937af0-b191-4fe1-983c-98c4158e12cd",
+      "state": "Active",
+      "lastUpdateStatus": "InProgress",
+      "lastUpdateStatusReason": "The function is being created.",
+      "lastUpdateStatusReasonCode": "Creating",
+      "packageType": "Zip",
+      "architectures": [
+        "x86_64"
+      ],
+      "ephemeralStorage": {
+        "size": 512
+      },
+      "snapStart": {
+        "applyOn": "None",
+        "optimizationStatus": "Off"
+      },
+      "runtimeVersionConfig": {
+        "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:28933846e9c8fabbfc0f38cf337c13c4e46a0f226f1ff0559d98c271ed4b22d8"
+      },
+      "loggingConfig": {
+        "logFormat": "Text",
+        "logGroup": "/aws/lambda/lambda-bom-demo"
+      }
+    },
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "51543c11-7013-4549-827d-ad58a3cdf4d9",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:31:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9029e5e8-4cb0-4fb8-8d29-7a2dcf49b500",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:31:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c8a39e3d-9153-4480-b414-67156a4e7f7c",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:31:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d64cd8a4-7d29-429b-884d-be66cef60cff",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T13:31:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "570f9d0b-1951-49f2-97ce-c5750f31eaa4",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:31:18+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY3LZA7RH7",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0b8c91d8-e484-4688-b885-a7add027073b",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:50+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9acbf3f5-9623-4ed2-8b7d-1d4a3a4244bd",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:50+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9cd06efb-73c8-4150-897d-19f8f1d63149",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:50+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "beeff150-56fe-4b4e-87a2-340ded0343d9",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:49+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f185f121-3960-41d1-a8b9-e8184309772b",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:49+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b0ca9019-4905-4a6d-8dc1-654005978a63",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:48+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "acfe61e4-b624-4e00-8a4a-a6559dbf4c52",
+    "EventName": "ListTags20170331",
+    "EventTime": "2026-06-23T13:30:24+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resource": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0e06fc10-d8b0-41e3-8bda-2a3ffccb1cd7",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:30:23+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "16b6be03-d9f8-45ba-a967-f0630574b229",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T13:30:22+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4e9c1084-3a44-4fab-a4b9-f6750a8f035a",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:22+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7bd5d898-ebc1-48af-b77d-7a08164f08b1",
+    "EventName": "ListEventSourceMappings20150331",
+    "EventTime": "2026-06-23T13:30:22+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYS7GBKCZZ",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo:$LATEST"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "abbbb54a-bc14-435b-88f1-dc9e106568be",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:30:22+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY3LXHBK24",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": true,
+      "includeDeprecatedFeaturesAccess": false,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": false,
+      "includeBlacklistedFeatures": true
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "eb1b077e-b62d-4a18-8f8e-844d85bf7847",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T13:30:22+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "bf6409b7-f7ff-4b9a-a553-9289117ca1d7",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T13:30:21+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0d41636b-0afe-4cc7-9344-b74defab6b6b",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "25f38f66-61b7-44d5-8fb4-48169e4b0fca",
+    "EventName": "GetPolicy20150331",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYQ2ZXPQK7",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "ResourceNotFoundException",
+    "errorMessage": "The resource you requested does not exist."
+  },
+  {
+    "EventId": "5e75a9dc-e831-4d48-8f04-db5834497909",
+    "EventName": "GetFunctionEventInvokeConfig",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "ResourceNotFoundException",
+    "errorMessage": "The function arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo:$LATEST doesn't have an EventInvokeConfig"
+  },
+  {
+    "EventId": "8176e724-32d6-4cb1-b6ba-6d1109f28097",
+    "EventName": "ListEventSourceMappings20150331",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYQ2ZXPQK7",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "888be1dc-ffb4-4e7a-bfa8-2ff05bfadc9b",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY4TPV6OUJ",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": true,
+      "includeDeprecatedFeaturesAccess": false,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": false,
+      "includeBlacklistedFeatures": true
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8b2aa3cd-25d0-4f5c-b855-123c0f92da61",
+    "EventName": "ListFunctionUrlConfigs",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8e30537b-c557-4905-9fdb-df0d71561f76",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYZ55L7M7L",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": true,
+      "includeDeprecatedFeaturesAccess": false,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": false,
+      "includeBlacklistedFeatures": true
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b1a147e8-fdba-3d3f-8519-10743b6e1826",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AWSService",
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "qualifier": "$LATEST"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "bf0364be-0e40-42f2-bd8b-c0130e369ffa",
+    "EventName": "GetFunctionConcurrency",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "bf0500ae-93c9-4b83-bb75-bbdf426bdc53",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c24201af-e037-4353-9754-ba57f8f488e6",
+    "EventName": "ListProvisionedConcurrencyConfigs",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d7ff66a0-6d96-4087-8a6a-8fa3dd1271a2",
+    "EventName": "ListEventSourceMappings20150331",
+    "EventTime": "2026-06-23T13:30:20+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0fdb11cf-c82c-440e-82e8-a38434044dc5",
+    "EventName": "ListVersionsByFunction20150331",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "37ac5dda-45f5-4202-b205-f1607c8a8ed5",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "5f929e21-50f4-4fce-8791-450af19c64db",
+    "EventName": "GetFunctionEventInvokeConfig",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "ResourceNotFoundException",
+    "errorMessage": "The function arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo:$LATEST doesn't have an EventInvokeConfig"
+  },
+  {
+    "EventId": "9336b398-ec77-4d6c-b965-5def33c6abf3",
+    "EventName": "ListAliases20150331",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b15ca80d-d00d-4278-8f1e-cbf9c4502d1f",
+    "EventName": "ListFunctionUrlConfigs",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c3bafea5-00e7-45cf-a19a-a201eb245081",
+    "EventName": "ListVersionsByFunction20150331",
+    "EventTime": "2026-06-23T13:30:19+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0e5e2f96-d45d-3001-a5e7-8d86f63fcf4e",
+    "EventName": "GetFunctionConfiguration20150331v2",
+    "EventTime": "2026-06-23T13:30:18+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AWSService",
+      "invokedBy": "AWS Internal"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "qualifier": "$LATEST"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "235dd977-d69d-41ee-8163-90b7a8362adc",
+    "EventName": "CreateFunction20150331",
+    "EventTime": "2026-06-23T13:30:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::Lambda::Function",
+        "ResourceName": "lambda-bom-demo"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "code": {},
+      "timeout": 3,
+      "memorySize": 128,
+      "publish": false,
+      "environment": {},
+      "architectures": [
+        "x86_64"
+      ]
+    },
+    "responseElements": {
+      "functionName": "lambda-bom-demo",
+      "functionArn": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "codeSize": 299,
+      "description": "",
+      "timeout": 3,
+      "memorySize": 128,
+      "lastModified": "2026-06-23T08:30:17.550+0000",
+      "codeSha256": "R6fL2f5y9xHPTo4NojRtY2hz04DlAxWgwXm4xSMnwRQ=",
+      "version": "$LATEST",
+      "environment": {},
+      "tracingConfig": {
+        "mode": "PassThrough"
+      },
+      "revisionId": "c3bceec1-2e6c-4dcf-b3c3-86ba76bd7984",
+      "state": "Pending",
+      "stateReason": "The function is being created.",
+      "stateReasonCode": "Creating",
+      "packageType": "Zip",
+      "architectures": [
+        "x86_64"
+      ],
+      "ephemeralStorage": {
+        "size": 512
+      },
+      "snapStart": {
+        "applyOn": "None",
+        "optimizationStatus": "Off"
+      },
+      "runtimeVersionConfig": {
+        "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:28933846e9c8fabbfc0f38cf337c13c4e46a0f226f1ff0559d98c271ed4b22d8"
+      },
+      "loggingConfig": {
+        "logFormat": "Text",
+        "logGroup": "/aws/lambda/lambda-bom-demo"
+      }
+    },
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f4d55cf1-59c6-4bec-a827-2ec003f6ff64",
+    "EventName": "CreateFunction20150331",
+    "EventTime": "2026-06-23T13:30:13+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "code": {},
+      "timeout": 3,
+      "memorySize": 128,
+      "publish": false,
+      "environment": {},
+      "architectures": [
+        "x86_64"
+      ]
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "InvalidParameterValueException",
+    "errorMessage": "The role defined for the function cannot be assumed by Lambda."
+  },
+  {
+    "EventId": "85e429c7-8301-403f-8c12-d315b8897a88",
+    "EventName": "CreateFunction20150331",
+    "EventTime": "2026-06-23T13:30:10+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "code": {},
+      "timeout": 3,
+      "memorySize": 128,
+      "publish": false,
+      "environment": {},
+      "architectures": [
+        "x86_64"
+      ]
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "InvalidParameterValueException",
+    "errorMessage": "The role defined for the function cannot be assumed by Lambda."
+  },
+  {
+    "EventId": "61e8fa48-b6bd-405d-b4ef-d6baf53ffca2",
+    "EventName": "CreateFunction20150331",
+    "EventTime": "2026-06-23T13:30:09+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "functionName": "lambda-bom-demo",
+      "runtime": "python3.14",
+      "role": "arn:aws:iam::986601184113:role/service-role/lambda-bom-demo-role-w1wm5nr5",
+      "handler": "lambda_function.lambda_handler",
+      "code": {},
+      "timeout": 3,
+      "memorySize": 128,
+      "publish": false,
+      "environment": {},
+      "architectures": [
+        "x86_64"
+      ]
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "InvalidParameterValueException",
+    "errorMessage": "The role defined for the function cannot be assumed by Lambda."
+  },
+  {
+    "EventId": "d9fa930c-d717-4d87-b591-950070dc0016",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:29:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY5V5BZYVX",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": true,
+      "includeDeprecatedFeaturesAccess": true,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": true,
+      "includeBlacklistedFeatures": true
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "22dbc205-26bd-4b0d-9ed3-95815cc212d6",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:29:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYRABZL6J3",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": true,
+      "includeDeprecatedFeaturesAccess": true,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": true,
+      "includeBlacklistedFeatures": true
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0f0f08f1-72cc-4d3e-817a-0a8b4ce83af2",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-23T13:29:04+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY5X7LOTS7",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "32c2c066-f9aa-4a13-a927-d35874445820",
+    "EventName": "GetAccountSettings20160819",
+    "EventTime": "2026-06-23T13:29:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "includePreviewFeatures": false,
+      "includeDeprecatedFeaturesAccess": false,
+      "includeDeprecatedRuntimeDetails": false,
+      "includeUnreservedConcurrentExecutionsMinimum": false,
+      "includeBlacklistedFeatures": false
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d8f99594-8c69-40a0-9c23-09b4894ec63a",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-23T13:29:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXWJYUL7O",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "36e0857d-2723-4c79-bbae-cd37e66ae3fa",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8a3a5581-2040-4127-a49d-e641213ff90a",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f04c8a1e-4059-4ef4-9328-266b33b2feb0",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:33+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7aaff123-500a-4a25-83ea-45b952ac84bd",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:32+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "e943d5f7-3b7d-47a2-9b42-9967202b7d68",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:31+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f221e9a5-88f6-4617-8db8-328d77dfc8bd",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:29+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c88345e4-476e-4704-b78f-c42b779aa8d0",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:28+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d65ee8f1-b8ce-4cae-a371-10d78c7fb231",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:27+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c39ce5fe-78eb-4189-bbf3-b93b99cfd3c2",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:25+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "15eceb8c-6ba4-45f4-9722-4ef4542a43d5",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T13:26:24+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "22e14ef5-434e-4ab1-859b-d6e503324102",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-23T13:26:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "amazon_lambda_logs",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYZMDR56B67",
+      "arn": "arn:aws:iam::986601184113:user/amazon_lambda_logs",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY32XX7NV7",
+      "userName": "amazon_lambda_logs"
+    },
+    "requestParameters": {
+      "maxItems": 1
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "662a5892-f06f-451e-901a-f9cee40eb450",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T04:14:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUQMGZEIN",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "cb1d7ade-37ea-421c-a8f9-419021c95eb6",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T04:14:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUQMGZEIN",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "1ef8f557-7eca-44f4-a59a-8065a5062570",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXH7CHYPU",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "341e0974-4dcd-4a6f-8872-c6b6fcb03b94",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXD7UKPX4",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "41df60ca-7cd0-4b7c-86c3-9473fcabd4c2",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXD7UKPX4",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "641282f5-f8b8-4662-b250-de6fdb7c29d4",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXH7CHYPU",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b87775b8-2613-42fd-bf78-5f7f5efb8041",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUQMGZEIN",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c3efef74-d770-49ed-95e4-03df115c3659",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXD7UKPX4",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "df1e70c2-fc3c-4027-8eb3-5f8e5130ad26",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXH7CHYPU",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f16f04ef-c165-4a65-910d-2309a71440a0",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYZIE3WFPK",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "fcc572ff-b567-4eec-bbde-4def0110ea59",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXD7UKPX4",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "fee35a91-d3d8-42ee-82d5-5d3d5ca31493",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUQMGZEIN",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "ff44655c-fba6-4223-8422-3e4c52737756",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T04:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYXH7CHYPU",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "12555824-68d8-43f2-ae83-2329a5675930",
+    "EventName": "GetRuntimeManagementConfig",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYSDGT2GPR",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "500ff79a-467f-48e7-809a-4d85de499a77",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYSDGT2GPR",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "6cad1a8a-edd1-4fa7-a31e-e21b47dafa85",
+    "EventName": "GetFunctionCodeSigningConfig",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYZIE3WFPK",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "6ef37e9f-85ab-4c41-aeb5-edec945eff78",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYSDGT2GPR",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "90d0665d-fd29-4429-994c-ea1ffb842498",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYSDGT2GPR",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9a703d9d-d5f9-42d7-95c5-7fe65d19e2b7",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYZIE3WFPK",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "be6b9c6c-5bb9-45f3-8e78-abed29c27e78",
+    "EventName": "GetFunctionRecursionConfig",
+    "EventTime": "2026-06-23T04:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYZIE3WFPK",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:14:15Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "functionName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "336b99b2-f3cb-4838-ac68-925d04f2170b",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-23T04:13:09+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYQQ4FI2R3",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-22T23:13:08Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "94e1f5d5-6129-4998-a94c-c6de93422316",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:54:54+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "525b75fe-2b9d-4789-802c-d384a9735f40",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7ef69a11-f0a9-41f4-b511-1687c4c1aea2",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "810d599a-f0c7-4e7c-b3c3-425ee7f3c40f",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "90b7ec15-f558-4afa-8deb-890bac7d8211",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "d4807a4c-1688-4d67-8b21-48396722372c",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "f0e0c146-6c26-4bb9-95fd-e987900ee107",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:52:59+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "25274a6c-05b7-40ab-9238-a932742b108a",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "64e00563-0ea5-4247-a3cb-cb0b0b3727ad",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "858301fc-1021-40d9-b87a-0306048b3b9e",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9bca3762-2216-4c88-bbd3-27f7a5b0f8ef",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "baad3bd2-77f7-41db-b896-2bd9d35e9059",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d2c1096d-4c2d-467e-abae-e24c3b988ccf",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T23:51:03+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9cf2c659-b6ec-421a-b522-0db021e42f53",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:49:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "ca837c57-5fcd-42aa-a1e5-cff1dad1965c",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:43:00+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "1d4d4c6e-c000-416f-b5ac-d6ebfd69096f",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "4e163504-cb9f-44b9-8bb3-8ac97a34d174",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "5853accc-ae03-41ff-9f63-e09156157145",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "be92405a-6907-413b-8312-7696f4fb7272",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d85739c0-25d1-45f4-b17f-d70a1eabffc3",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "ee055834-05be-4281-9c93-55ccb86ffbc4",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T23:41:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "225c778e-dabd-42ef-bee5-c80759c1e3da",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T23:39:06+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "474981ff-0bea-4770-a1d8-b37dd88e8677",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T23:39:06+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "ad53e3d0-1caf-4e95-b06f-ffb518727084",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T23:39:06+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "be87e16f-2a29-412b-b03d-1943ca30227a",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T23:39:06+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "d3fceba9-a833-458f-9cc3-bd26dca8ef2e",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T23:39:06+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "fb7b380c-3658-403d-bf9b-5d2acc7362f8",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:39:05+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "3c07ca94-0bcb-41af-bb2a-db6c5237b654",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T23:35:13+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "201fc26a-c6c7-4950-a616-cf7c78b94d8a",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "6f9f4422-4f8f-4748-bac4-3d0d570391dc",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "8a289178-cc8e-4647-aaaf-f202a29abd55",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "a7092e08-afa4-4735-aa55-57da22ec168e",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "babdbaaf-8ae7-4067-98b6-ff4413d41b19",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "ee127cc7-1b74-4342-bcc4-347584b7c105",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T19:14:35+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "dedc6c4a-bcbe-4cef-a5eb-460877a56839",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T19:14:16+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "3ba54bec-2d5d-4e6a-aec4-fe6ca17561d2",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T19:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "50aadccb-59fe-45bd-a888-30db5a9e7f7f",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T19:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "57878e0b-40cf-4182-ab07-da156692da51",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T19:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7cfcee8c-886d-4eae-a152-cf8f375eb052",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T19:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8d1181c6-c987-4902-b912-a1ca4dc60eca",
+    "EventName": "GetPolicy20150331v2",
+    "EventTime": "2026-06-22T19:14:15+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "functionName": "stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0a589b46-780c-4662-b14e-361d5b88f683",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "1e6377a3-1270-44c2-8813-4d5e28fa9f69",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "2925e1c8-319e-4902-92c1-600ba867a15b",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "324904aa-c610-4285-ae75-89a42d25a468",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "b288cd42-0916-4347-ae7a-d3edde5f2685",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "f845357e-9c4a-452d-9a85-04857691b36e",
+    "EventName": "GetFunctionUrlConfig",
+    "EventTime": "2026-06-22T19:12:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunctionUrlConfig on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunctionUrlConfig action"
+  },
+  {
+    "EventId": "02d9a55d-c022-44d4-8003-1591372264ef",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "04f6ceeb-259d-4beb-9b09-b1c115f1f22f",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "0546142d-0bfc-49cf-a4da-a0b57c575fb1",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "11c74c1b-cc58-446e-b648-8c9d26c591d9",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:esportsgps because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "96292b4f-34d9-4ce3-9bba-59709e1e222b",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:stars_test because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "bc4ed7af-ff16-4838-9f16-219fc5c800d5",
+    "EventName": "GetFunction20150331v2",
+    "EventTime": "2026-06-22T19:12:17+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "AccessDenied",
+    "errorMessage": "User: arn:aws:iam::986601184113:user/cytexaudit is not authorized to perform: lambda:GetFunction on resource: arn:aws:lambda:us-east-1:986601184113:function:medical_care because no identity-based policy allows the lambda:GetFunction action"
+  },
+  {
+    "EventId": "19676e38-338e-402f-9426-fec649aafdd0",
+    "EventName": "ListFunctions20150331",
+    "EventTime": "2026-06-22T19:11:37+05:00",
+    "EventSource": "lambda.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "maxItems": 10000
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "runtime": "python3.14",
+      "handler": "lambda_function.lambda_handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2026-06-23T08:33:26.000+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/lambda-bom-demo",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-lambda-bom-demo",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "lambda-bom-demo"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "lambda-bom-demo",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo",
+      "runtime": "python3.14",
+      "handler": "lambda_function.lambda_handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2026-06-23T08:33:26.000+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/lambda-bom-demo",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-lambda-bom-demo:$LATEST",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "lambda-bom-demo:$LATEST"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "lambda-bom-demo:$LATEST",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:lambda-bom-demo:$LATEST",
+      "runtime": "python3.14",
+      "handler": "lambda_function.lambda_handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2026-06-23T08:33:26.000+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/lambda-bom-demo",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-esportsgps",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "esportsgps",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps",
+      "runtime": "python3.6",
+      "handler": "esportsgps.handler",
+      "memory_size": 128,
+      "timeout": 10,
+      "last_modified": "2019-01-11T14:20:15.044+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/esportsgps",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-escapeRoomLambdaFunc",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "escapeRoomLambdaFunc",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc",
+      "runtime": "python3.6",
+      "handler": "lambda_room_escape.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-09-14T18:27:16.049+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/escapeRoomLambdaFunc",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-medical_care",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "medical_care",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:medical_care",
+      "runtime": "python3.6",
+      "handler": "medicalcare.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-12-24T12:42:20.063+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/medical_care",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-stars_test",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "stars_test",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:stars_test",
+      "runtime": "python3.6",
+      "handler": "stars.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-11-15T14:00:34.999+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/stars_test",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-trap_doors_lambda",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "trap_doors_lambda",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda",
+      "runtime": "python3.6",
+      "handler": "trap_doors_lambda.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-11-16T14:27:41.522+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/trap_doors_lambda",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:trap_doors_lambda",
+      "runtime": "python3.6",
+      "handler": "trap_doors_lambda.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-11-16T14:27:41.522+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/trap_doors_lambda",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:escapeRoomLambdaFunc",
+      "runtime": "python3.6",
+      "handler": "lambda_room_escape.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-09-14T18:27:16.049+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/escapeRoomLambdaFunc",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:medical_care",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:medical_care"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:medical_care",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:medical_care",
+      "runtime": "python3.6",
+      "handler": "medicalcare.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-12-24T12:42:20.063+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/medical_care",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:esportsgps",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:esportsgps",
+      "runtime": "python3.6",
+      "handler": "esportsgps.handler",
+      "memory_size": 128,
+      "timeout": 10,
+      "last_modified": "2019-01-11T14:20:15.044+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/esportsgps",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Function-arn:aws:lambda:us-east-1:986601184113:function:stars_test",
+    "EventName": "LambdaResourceInventory",
+    "EventSource": "lambda-local-enumeration",
+    "EventTime": "2026-06-23T08:36:41.695985+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Function",
+      "resourceName": "arn:aws:lambda:us-east-1:986601184113:function:stars_test"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Function",
+      "resource_name": "arn:aws:lambda:us-east-1:986601184113:function:stars_test",
+      "arn": "arn:aws:lambda:us-east-1:986601184113:function:stars_test",
+      "runtime": "python3.6",
+      "handler": "stars.handler",
+      "memory_size": 128,
+      "timeout": 3,
+      "last_modified": "2018-11-15T14:00:34.999+0000",
+      "state": "Active",
+      "architecture": "x86_64",
+      "package_type": "Zip",
+      "layer_arns": [],
+      "vpc_enabled": false,
+      "log_group": "/aws/lambda/stars_test",
+      "compatible_runtimes": [],
+      "access_denied": false,
+      "not_found": false
+    }
+  }
+]
