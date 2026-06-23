@@ -1,0 +1,3384 @@
+[
+  {
+    "EventId": "751a3cf3-3ab2-41bf-8a7d-2ccb84d88c2d",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9088360b-6448-4ea9-9282-2c0eb2ac1728",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9b55fcb5-824e-4044-8e1f-7a64e21bbe86",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "a0514be7-282c-4dff-b0ed-741cf2d4082e",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b27bc17a-5005-470d-8b63-6d7aa542094f",
+    "EventName": "DescribeContributorInsights",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c1e23015-34d0-44f9-8ddf-339494bd48c0",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "f5906012-9149-4103-8cef-4e95642334a5",
+    "EventName": "DescribeKinesisStreamingDestination",
+    "EventTime": "2026-06-23T15:26:12+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYW2MT2UT6",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:26:12Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "14c9c0db-6554-42f1-a410-636a4b4fd0fa",
+    "EventName": "DescribeKinesisStreamingDestination",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "300c0df5-99eb-444a-bb5e-88bd11ffe413",
+    "EventName": "DescribeContributorInsights",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "69cc2aea-09e3-41ba-bcb4-ece4e5f745f5",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7598e7c6-0b2b-42aa-9f48-64cfbb8393d1",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "a4d8c0e1-b1b4-427c-813e-d0264dd2d964",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "tableName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f740679e-1938-44c1-b54b-9c960c05d6a9",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f8172281-931c-4c20-b4fd-3903fb7e20b5",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:25:10+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYROYODMQS",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T10:25:10Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "4af2e70c-3f91-4a57-bc93-7b5a37cfb0fa",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:24:40+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "31fb1f7e-28ce-4a16-841a-0152471f6322",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:24:17+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "985aab9a-86b0-4698-a663-760a0e9b64c5",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:23:21+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "43a13855-1ddf-4449-ac01-15359755003e",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "5d6130c6-330b-4817-aef4-421e51c933a8",
+    "EventName": "DescribeGlobalTable",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "globalTableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "GlobalTableNotFoundException",
+    "errorMessage": "Global table not found: Global table with name: 'demo-table' does not exist."
+  },
+  {
+    "EventId": "8ae5a895-e314-4b11-8c6b-2db70e078e08",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "a66c4f33-6189-45a2-9415-1ef43b3a5f29",
+    "EventName": "ListBackups",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "backupType": "ALL"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "ba8a6100-64cf-424d-803b-1f7590b668cb",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c44ceb51-8e3d-4c10-b982-d6b8ae1bb289",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "cc7e025a-2222-456e-9c7f-2380a3d5d9c8",
+    "EventName": "ListContributorInsights",
+    "EventTime": "2026-06-23T15:23:14+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "maxResults": 0
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "bd423039-a1ee-4488-ba66-02921184d6f3",
+    "EventName": "UpdateContinuousBackups",
+    "EventTime": "2026-06-23T15:23:13+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "pointInTimeRecoverySpecification": {
+        "pointInTimeRecoveryEnabled": true,
+        "recoveryPeriodInDays": 35
+      }
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "fe3fd403-f7f5-46fe-a0bf-117aef2f3a48",
+    "EventName": "UpdateContinuousBackups",
+    "EventTime": "2026-06-23T15:23:13+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "pointInTimeRecoverySpecification": {
+        "pointInTimeRecoveryEnabled": true,
+        "recoveryPeriodInDays": 35
+      }
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "e5130bc9-bad2-4e66-a05b-0adae4b79e9d",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:23:09+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "07c97eb1-b9d7-4413-98a5-675bae653b5c",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:23:07+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "1316c6ff-ea7c-4d07-bc44-1a03491c3ac9",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:23:07+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4abb5914-04de-4bbd-9fca-f95f8f1730ff",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:23:07+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "2b6940a8-88b5-46fa-9e56-5ffd7d806969",
+    "EventName": "DescribeGlobalTable",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "globalTableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "GlobalTableNotFoundException",
+    "errorMessage": "Global table not found: Global table with name: 'demo-table' does not exist."
+  },
+  {
+    "EventId": "2e704eb7-679a-4e54-92f5-642033f9deb7",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "43795793-4379-43c6-87f9-5aa91b0fbaa7",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4565eba9-7c04-4e65-899a-89d2d5b860b8",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "47db54f4-a15d-4123-83f1-162ec726a5e0",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4ce364ed-e271-4443-b73e-552dd5f89a0c",
+    "EventName": "ListContributorInsights",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "maxResults": 0
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8c78bae4-c7dd-41c8-b7a4-5bfcd9472259",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "9ab33331-4bb2-41ac-a4b4-9639f842f40e",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9ac040ec-8e0f-42f3-bac5-0c0b6465089d",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c0cb7caa-e432-4aa6-b002-28f35dcc7cea",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:23:06+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c9825e7c-ba53-4178-bdd0-5e2d710e73b9",
+    "EventName": "UpdateTimeToLive",
+    "EventTime": "2026-06-23T15:23:04+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "timeToLiveSpecification": {
+        "enabled": true,
+        "attributeName": "id"
+      }
+    },
+    "responseElements": {
+      "timeToLiveSpecification": {
+        "enabled": true,
+        "attributeName": "id"
+      }
+    },
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "64976e03-0554-4bde-9f23-7f2db460c309",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:22:51+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b199c249-b00d-46f5-862f-0c6721295ffa",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:22:51+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "07fbdf80-acb0-4259-acea-9c886bc4379d",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "46589402-f8db-4fcc-b562-7caecb85c413",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "4a058c57-638d-43a7-883e-82f7aa983ed1",
+    "EventName": "DescribeGlobalTable",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "globalTableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "GlobalTableNotFoundException",
+    "errorMessage": "Global table not found: Global table with name: 'demo-table' does not exist."
+  },
+  {
+    "EventId": "68290560-ee3d-4351-a602-38546a90f4b3",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "76d24d46-2b14-4ba5-bc2f-fb657b3bfeed",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "83d28f61-781c-4768-a2eb-019de9d84988",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b1bb0ac7-1fbb-457f-aba5-3eb44a80d1d9",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c607d476-d1d2-400d-ae78-9c29b17aaf4c",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "cae1a7fc-be34-42af-a9e4-a6d16b548ff6",
+    "EventName": "ListContributorInsights",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "maxResults": 0
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "cbe427ed-1bc3-4866-8a85-3b826b7f5754",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "e419d8ac-8325-4b41-8809-2c5b6766979c",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f337312f-b770-455d-ad2e-a37d20e1bf0a",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:22:38+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "613bf7dc-0e24-4c20-85cf-150cbbb53288",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:22:37+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7ff16e0f-b617-4786-8541-4946c487d7f5",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:37+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8b55ddc9-1cd9-4b49-abab-04923a002eff",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:36+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "fdb7546f-cd28-49be-a0f8-b07e4c4418e1",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:36+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9d59a19c-f0d3-452b-8a72-f59b09843cd0",
+    "EventName": "TagResource",
+    "EventTime": "2026-06-23T15:22:35+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+      "tags": [
+        {
+          "key": "env",
+          "value": "demo"
+        }
+      ]
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "ecf32cf2-b282-44fa-8b57-489c5b23ca45",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:22:26+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "04355dd5-bbe6-4ba6-9aef-3462dc546a21",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "188e8eea-9cca-40fb-925e-39c1bb1bffa7",
+    "EventName": "DescribeGlobalTable",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "globalTableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "GlobalTableNotFoundException",
+    "errorMessage": "Global table not found: Global table with name: 'demo-table' does not exist."
+  },
+  {
+    "EventId": "4460db58-82bd-4e7d-9a0c-73b20b56d81f",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4f0040db-102b-46ff-8611-c06d1cbf403c",
+    "EventName": "ListTagsOfResource",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9f9f421c-7c57-4a2e-84dc-b2a1de07bf9b",
+    "EventName": "ListContributorInsights",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table",
+      "maxResults": 0
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c2a9b6c4-9b30-4b8c-9ac1-a45552a78823",
+    "EventName": "GetResourcePolicy",
+    "EventTime": "2026-06-23T15:21:47+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "resourceArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "PolicyNotFoundException",
+    "errorMessage": "Resource-based policy not found for the provided ResourceArn: arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+  },
+  {
+    "EventId": "10756138-2ee2-4350-abea-db1266b5a24a",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-23T15:21:46+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "54f9a89f-1510-463e-b1ef-b5b4dd835b28",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:46+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "5b9555f1-3481-4ac5-9a8b-f4a86bb46ec4",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:21:46+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "ed755bb0-9ebc-43ad-bcc2-16ee53af3821",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:46+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f0b6efa5-0aa9-42f0-b34d-0674ee797467",
+    "EventName": "DescribeTimeToLive",
+    "EventTime": "2026-06-23T15:21:46+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "4f4d6eaf-dded-4f31-a462-8923d0a2269c",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:41+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "983352b2-6ca4-4577-923b-7582dc09fe40",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:41+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "03fd8fc4-6d1b-4dc5-b77e-28c66be05b48",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:22+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d19501d2-3e19-4ec8-bb0e-0e05b3ae5ce6",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:22+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "801e7cad-6e84-4f31-8d49-96d9adc635cd",
+    "EventName": "CreateTable",
+    "EventTime": "2026-06-23T15:21:21+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+      },
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "83a8c695-f011-4207-a8a8-4d1ea4618e05"
+      },
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "attributeDefinitions": [
+        {
+          "attributeName": "id",
+          "attributeType": "S"
+        }
+      ],
+      "tableName": "demo-table",
+      "keySchema": [
+        {
+          "attributeName": "id",
+          "keyType": "HASH"
+        }
+      ],
+      "billingMode": "PAY_PER_REQUEST",
+      "tableClass": "STANDARD",
+      "deletionProtectionEnabled": false
+    },
+    "responseElements": {
+      "tableDescription": {
+        "attributeDefinitions": [
+          {
+            "attributeName": "id",
+            "attributeType": "S"
+          }
+        ],
+        "tableName": "demo-table",
+        "keySchema": [
+          {
+            "attributeName": "id",
+            "keyType": "HASH"
+          }
+        ],
+        "tableStatus": "CREATING",
+        "creationDateTime": "2026-06-23T10:21:21Z",
+        "provisionedThroughput": {
+          "numberOfDecreasesToday": 0,
+          "readCapacityUnits": 0,
+          "writeCapacityUnits": 0
+        },
+        "tableSizeBytes": 0,
+        "itemCount": 0,
+        "tableArn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+        "tableId": "83a8c695-f011-4207-a8a8-4d1ea4618e05",
+        "tableThroughputModeSummary": {
+          "tableThroughputMode": "PAY_PER_REQUEST"
+        },
+        "billingModeSummary": {
+          "billingMode": "PAY_PER_REQUEST"
+        },
+        "tableClassSummary": {
+          "tableClass": "STANDARD"
+        },
+        "deletionProtectionEnabled": false
+      }
+    },
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "a56c8f6c-e9b4-43f8-9ae7-42540a96c0af",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:21+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "079029e6-eabd-4131-88d9-22f2513d141f",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:21:20+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "demo-table"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "ResourceNotFoundException",
+    "errorMessage": "Requested resource not found: Table: demo-table not found"
+  },
+  {
+    "EventId": "6d42aad2-e870-4ef1-905a-29245d4dc32d",
+    "EventName": "DescribeLimits",
+    "EventTime": "2026-06-23T15:20:34+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9c9bb359-de6d-4f78-996b-237d1d04529d",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:30+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYWA5QERY5",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "limit": 1
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b16f9925-ebca-40b7-a0c0-71881b19f5d4",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:30+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "b53c005d-3fd1-4117-9403-3376eb4b7b08",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:20:30+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY52TLDHEQ",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c593a589-4ee7-4b5a-a0b0-00b0c0b24dc5",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:30+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNY52TLDHEQ",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "limit": 1
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "d5bc63f5-33be-40e6-86b2-307682f3171c",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:20:30+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYWA5QERY5",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "10401254-aca5-4119-a739-24f485d40e10",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-23T15:20:29+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7a17d586-e634-47ff-80ff-46f9d577f4c7",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:29+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {},
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8d00a249-5550-492d-a110-fee4b1890795",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:29+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "limit": 1
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "feb666a3-1aae-4ed9-80e2-ff61536cdb90",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-23T15:20:28+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYUS3Y6I44",
+      "userName": "agentic-access",
+      "sessionContext": {
+        "attributes": {
+          "creationDate": "2026-06-23T07:22:03Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "requestParameters": {
+      "limit": 1
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.128.27.61",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "79a379aa-f3df-4244-ac93-25ed87db2880",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-22T19:28:20+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "9a4d2e3c-a858-49ab-86da-a4d687f80956",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-22T19:28:20+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "c0b459ee-1aed-48e7-90bf-5a7763a0be4e",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-22T19:28:20+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "limit": 100
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "7ba68d03-4145-42f5-aed9-52eb92ba3169",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-22T19:23:23+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "8b2550e2-6a72-4c89-a123-1fda44fd61fe",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-22T19:23:23+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "limit": 100
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "64.176.200.95",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "43a57b8b-d022-425c-82af-12d57bed30d3",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-22T17:50:58+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "e2a89aae-9b08-420e-883b-05f291bcf611",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-22T17:50:58+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "limit": 100
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "f2fb95d7-853b-405c-9359-eccfc0525bd4",
+    "EventName": "DescribeContinuousBackups",
+    "EventTime": "2026-06-22T17:50:58+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "711fd411-7029-42db-8813-0c115e587e14",
+    "EventName": "DescribeTable",
+    "EventTime": "2026-06-22T17:49:05+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [
+      {
+        "ResourceType": "AWS::DynamoDB::Table",
+        "ResourceName": "High-Low-Game"
+      }
+    ],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "tableName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "73cbbc1a-8279-466e-842e-afad4746da6f",
+    "EventName": "ListTables",
+    "EventTime": "2026-06-22T17:49:05+05:00",
+    "EventSource": "dynamodb.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "requestParameters": {
+      "limit": 100
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "45.77.155.153",
+    "errorCode": "",
+    "errorMessage": ""
+  },
+  {
+    "EventId": "inventory-Table-High-Low-Game",
+    "EventName": "DynamoDBResourceInventory",
+    "EventSource": "dynamodb-local-enumeration",
+    "EventTime": "2026-06-23T10:31:14.472662+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Table",
+      "resourceName": "High-Low-Game"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Table",
+      "resource_name": "High-Low-Game",
+      "arn": "arn:aws:dynamodb:us-east-1:986601184113:table/High-Low-Game",
+      "table_id": "03827001-2aa5-458d-8ed1-f82c7bfa7e33",
+      "table_status": "ACTIVE",
+      "billing_mode": "PROVISIONED",
+      "item_count": 0,
+      "size_bytes": 0,
+      "partition_key": "id",
+      "sort_key": "",
+      "gsi_count": 0,
+      "lsi_count": 0,
+      "stream_enabled": false,
+      "stream_view_type": "",
+      "encryption_type": "AWS_OWNED_KMS",
+      "creation_datetime": "2018-09-08T09:39:13.754000+05:00",
+      "pitr_enabled": false,
+      "pitr_earliest": "",
+      "pitr_latest": "",
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Table-demo-table",
+    "EventName": "DynamoDBResourceInventory",
+    "EventSource": "dynamodb-local-enumeration",
+    "EventTime": "2026-06-23T10:31:14.472662+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Table",
+      "resourceName": "demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Table",
+      "resource_name": "demo-table",
+      "arn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+      "table_id": "83a8c695-f011-4207-a8a8-4d1ea4618e05",
+      "table_status": "ACTIVE",
+      "billing_mode": "PAY_PER_REQUEST",
+      "item_count": 0,
+      "size_bytes": 0,
+      "partition_key": "id",
+      "sort_key": "",
+      "gsi_count": 0,
+      "lsi_count": 0,
+      "stream_enabled": false,
+      "stream_view_type": "",
+      "encryption_type": "AWS_OWNED_KMS",
+      "creation_datetime": "2026-06-23T15:21:21.010000+05:00",
+      "pitr_enabled": true,
+      "pitr_earliest": "2026-06-23T15:23:13+05:00",
+      "pitr_latest": "2026-06-23T15:23:44.846000+05:00",
+      "access_denied": false,
+      "not_found": false
+    }
+  },
+  {
+    "EventId": "inventory-Table-arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+    "EventName": "DynamoDBResourceInventory",
+    "EventSource": "dynamodb-local-enumeration",
+    "EventTime": "2026-06-23T10:31:14.472662+00:00",
+    "Username": "",
+    "Resources": [],
+    "userIdentity": {},
+    "requestParameters": {
+      "resourceType": "Table",
+      "resourceName": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+    },
+    "responseElements": {},
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "",
+    "errorCode": "",
+    "errorMessage": "",
+    "inventory": {
+      "resource_type": "Table",
+      "resource_name": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+      "arn": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+      "table_id": "83a8c695-f011-4207-a8a8-4d1ea4618e05",
+      "table_status": "ACTIVE",
+      "billing_mode": "PAY_PER_REQUEST",
+      "item_count": 0,
+      "size_bytes": 0,
+      "partition_key": "id",
+      "sort_key": "",
+      "gsi_count": 0,
+      "lsi_count": 0,
+      "stream_enabled": false,
+      "stream_view_type": "",
+      "encryption_type": "AWS_OWNED_KMS",
+      "creation_datetime": "2026-06-23T15:21:21.010000+05:00",
+      "pitr_enabled": true,
+      "pitr_earliest": "2026-06-23T15:23:13+05:00",
+      "pitr_latest": "2026-06-23T15:23:46.771000+05:00",
+      "access_denied": false,
+      "not_found": false
+    }
+  }
+]

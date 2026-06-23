@@ -1,0 +1,352 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:27f13abd-edd9-493d-b7a4-7dc26892c775",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-23T10:31:33.003364+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "aws-dynamodb-bom-generator",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "root-aws-account",
+      "name": "AWS Account",
+      "properties": [
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:SourceFiles",
+          "value": "dynamodb_logs_2026-06-23_10-31-14.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-role-aws-service-role-resource-explorer-2-amazonaws-com-AWSServiceRoleForResourceExplorer",
+      "name": "AWSServiceRoleForResourceExplorer",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "AssumedRole"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-agentic-access",
+      "name": "agentic-access",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/agentic-access"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-cytexaudit",
+      "name": "cytexaudit",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/cytexaudit"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "bom-ref": "dynamodb_resource-Table-arn-aws-dynamodb-us-east-1-986601184113-table-demo-table",
+      "name": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "aws:DynamoDBResourceType",
+          "value": "Table"
+        },
+        {
+          "name": "aws:DynamoDBResourceName",
+          "value": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+        },
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        },
+        {
+          "name": "aws:DynamoDBTableArn",
+          "value": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+        },
+        {
+          "name": "aws:TableId",
+          "value": "83a8c695-f011-4207-a8a8-4d1ea4618e05"
+        },
+        {
+          "name": "aws:TableStatus",
+          "value": "ACTIVE"
+        },
+        {
+          "name": "aws:BillingMode",
+          "value": "PAY_PER_REQUEST"
+        },
+        {
+          "name": "aws:ItemCount",
+          "value": "0"
+        },
+        {
+          "name": "aws:TableSizeMB",
+          "value": "0.0"
+        },
+        {
+          "name": "aws:PartitionKey",
+          "value": "id"
+        },
+        {
+          "name": "aws:StreamEnabled",
+          "value": "false"
+        },
+        {
+          "name": "aws:EncryptionType",
+          "value": "AWS_OWNED_KMS"
+        },
+        {
+          "name": "aws:CreationDateTime",
+          "value": "2026-06-23T15:21:21.010000+05:00"
+        },
+        {
+          "name": "aws:PITREnabled",
+          "value": "true"
+        },
+        {
+          "name": "aws:PITREarliestRestore",
+          "value": "2026-06-23T15:23:13+05:00"
+        },
+        {
+          "name": "aws:PITRLatestRestore",
+          "value": "2026-06-23T15:23:46.771000+05:00"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dynamodb_resource-Table-demo-table",
+      "name": "demo-table",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "aws:DynamoDBResourceType",
+          "value": "Table"
+        },
+        {
+          "name": "aws:DynamoDBResourceName",
+          "value": "demo-table"
+        },
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        },
+        {
+          "name": "aws:DynamoDBTableArn",
+          "value": "arn:aws:dynamodb:us-east-1:986601184113:table/demo-table"
+        },
+        {
+          "name": "aws:TableId",
+          "value": "83a8c695-f011-4207-a8a8-4d1ea4618e05"
+        },
+        {
+          "name": "aws:TableStatus",
+          "value": "ACTIVE"
+        },
+        {
+          "name": "aws:BillingMode",
+          "value": "PAY_PER_REQUEST"
+        },
+        {
+          "name": "aws:ItemCount",
+          "value": "0"
+        },
+        {
+          "name": "aws:TableSizeMB",
+          "value": "0.0"
+        },
+        {
+          "name": "aws:PartitionKey",
+          "value": "id"
+        },
+        {
+          "name": "aws:StreamEnabled",
+          "value": "false"
+        },
+        {
+          "name": "aws:EncryptionType",
+          "value": "AWS_OWNED_KMS"
+        },
+        {
+          "name": "aws:CreationDateTime",
+          "value": "2026-06-23T15:21:21.010000+05:00"
+        },
+        {
+          "name": "aws:PITREnabled",
+          "value": "true"
+        },
+        {
+          "name": "aws:PITREarliestRestore",
+          "value": "2026-06-23T15:23:13+05:00"
+        },
+        {
+          "name": "aws:PITRLatestRestore",
+          "value": "2026-06-23T15:23:44.846000+05:00"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dynamodb_resource-Table-High-Low-Game",
+      "name": "High-Low-Game",
+      "authenticated": true,
+      "properties": [
+        {
+          "name": "aws:DynamoDBResourceType",
+          "value": "Table"
+        },
+        {
+          "name": "aws:DynamoDBResourceName",
+          "value": "High-Low-Game"
+        },
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "dynamodb.amazonaws.com"
+        },
+        {
+          "name": "aws:DynamoDBTableArn",
+          "value": "arn:aws:dynamodb:us-east-1:986601184113:table/High-Low-Game"
+        },
+        {
+          "name": "aws:TableId",
+          "value": "03827001-2aa5-458d-8ed1-f82c7bfa7e33"
+        },
+        {
+          "name": "aws:TableStatus",
+          "value": "ACTIVE"
+        },
+        {
+          "name": "aws:BillingMode",
+          "value": "PROVISIONED"
+        },
+        {
+          "name": "aws:ItemCount",
+          "value": "0"
+        },
+        {
+          "name": "aws:TableSizeMB",
+          "value": "0.0"
+        },
+        {
+          "name": "aws:PartitionKey",
+          "value": "id"
+        },
+        {
+          "name": "aws:StreamEnabled",
+          "value": "false"
+        },
+        {
+          "name": "aws:EncryptionType",
+          "value": "AWS_OWNED_KMS"
+        },
+        {
+          "name": "aws:CreationDateTime",
+          "value": "2018-09-08T09:39:13.754000+05:00"
+        },
+        {
+          "name": "aws:PITREnabled",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-aws-account",
+      "dependsOn": [
+        "dynamodb_resource-Table-arn-aws-dynamodb-us-east-1-986601184113-table-demo-table",
+        "dynamodb_resource-Table-demo-table",
+        "dynamodb_resource-Table-High-Low-Game"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-role-aws-service-role-resource-explorer-2-amazonaws-com-AWSServiceRoleForResourceExplorer",
+      "dependsOn": [
+        "dynamodb_resource-Table-arn-aws-dynamodb-us-east-1-986601184113-table-demo-table"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-agentic-access",
+      "dependsOn": [
+        "dynamodb_resource-Table-High-Low-Game",
+        "dynamodb_resource-Table-demo-table"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-cytexaudit",
+      "dependsOn": [
+        "dynamodb_resource-Table-High-Low-Game"
+      ]
+    }
+  ]
+}
