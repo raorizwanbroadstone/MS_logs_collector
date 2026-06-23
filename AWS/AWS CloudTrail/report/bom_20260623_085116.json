@@ -1,0 +1,187 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ccf15c2b-4c3e-4d1e-b0cf-8f8f87ac46a3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-23T08:51:16.199706+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "aws-cloudtrail-bom-generator",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "root-aws-account",
+      "name": "AWS Account",
+      "properties": [
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:SourceFiles",
+          "value": "cloudtrail_logs_2026-06-23_08-51-01.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-agentic-access",
+      "name": "agentic-access",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/agentic-access"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "cloudtrail.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-cytexaudit",
+      "name": "cytexaudit",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/cytexaudit"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "cloudtrail.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-amazon_lambda_logs",
+      "name": "amazon_lambda_logs",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/amazon_lambda_logs"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "cloudtrail.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-user-amazon_sagemaker_logs",
+      "name": "amazon_sagemaker_logs",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:iam::986601184113:user/amazon_sagemaker_logs"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "cloudtrail.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "iam_principal-arn-aws-iam--986601184113-role-aws-service-role-resource-explorer-2-amazonaws-com-AWSServiceRoleForResourceExplorer",
+      "name": "AWSServiceRoleForResourceExplorer",
+      "properties": [
+        {
+          "name": "aws:IAMPrincipalARN",
+          "value": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2"
+        },
+        {
+          "name": "aws:IdentityType",
+          "value": "AssumedRole"
+        },
+        {
+          "name": "aws:AccountId",
+          "value": "986601184113"
+        },
+        {
+          "name": "aws:EventSource",
+          "value": "cloudtrail.amazonaws.com"
+        }
+      ]
+    }
+  ],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "root-aws-account",
+      "dependsOn": []
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-agentic-access",
+      "dependsOn": [
+        "root-aws-account"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-cytexaudit",
+      "dependsOn": [
+        "root-aws-account"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-amazon_lambda_logs",
+      "dependsOn": [
+        "root-aws-account"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-user-amazon_sagemaker_logs",
+      "dependsOn": [
+        "root-aws-account"
+      ]
+    },
+    {
+      "ref": "iam_principal-arn-aws-iam--986601184113-role-aws-service-role-resource-explorer-2-amazonaws-com-AWSServiceRoleForResourceExplorer",
+      "dependsOn": [
+        "root-aws-account"
+      ]
+    }
+  ]
+}
