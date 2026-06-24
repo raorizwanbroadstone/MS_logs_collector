@@ -1,0 +1,157 @@
+{
+  "collectionTime": "2026-06-24T08:44:11.060417+00:00",
+  "summary": {
+    "subscriptions_scanned": 1,
+    "servers_collected": 1,
+    "databases_collected": 2
+  },
+  "servers": [
+    {
+      "server_name": "test-logsgetter",
+      "resource_id": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Sql/servers/test-logsgetter",
+      "location": "swedencentral",
+      "resource_group": "logs-test-rg",
+      "subscription_id": "578f7d16-b299-4b9f-8f47-fa0bc5427842",
+      "subscription_name": "Azure subscription 1",
+      "details": {
+        "fqdn": "test-logsgetter.database.windows.net",
+        "administrator_login": "CloudSA0e730299",
+        "version": "12.0",
+        "state": "Ready",
+        "public_network_access": "Enabled",
+        "minimal_tls_version": "1.2"
+      },
+      "databases": [
+        {
+          "database_name": "free-sql-db-6552242",
+          "sku_name": "GP_S_Gen5",
+          "sku_tier": "GeneralPurpose",
+          "sku_capacity": 2,
+          "status": "Online",
+          "collation": "SQL_Latin1_General_CP1_CI_AS",
+          "creation_date": "2026-06-24T08:40:01.643000+00:00",
+          "max_size_gb": 32.0,
+          "zone_redundant": false,
+          "read_scale": "Disabled",
+          "high_availability_replica_count": null,
+          "backup_storage_redundancy": "Local",
+          "in_elastic_pool": false,
+          "elastic_pool_id": ""
+        },
+        {
+          "database_name": "master",
+          "sku_name": "GP_SYSTEM",
+          "sku_tier": "System",
+          "sku_capacity": 4,
+          "status": "Online",
+          "collation": "SQL_Latin1_General_CP1_CI_AS",
+          "creation_date": "2026-06-24T08:39:09.317000+00:00",
+          "max_size_gb": 100.0,
+          "zone_redundant": false,
+          "read_scale": "Disabled",
+          "high_availability_replica_count": null,
+          "backup_storage_redundancy": "Geo",
+          "in_elastic_pool": false,
+          "elastic_pool_id": ""
+        }
+      ],
+      "activity_logs": [
+        {
+          "eventTimestamp": "2026-06-24T08:39:47.206423+00:00",
+          "operationName": "Microsoft.Sql/servers/databases/read",
+          "status": "Running",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:39:19.396154+00:00",
+          "operationName": "Microsoft.Sql/servers/databases/write",
+          "status": "Started",
+          "caller": "",
+          "app_id": "",
+          "resource_provider_name": "MICROSOFT.SQL"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:39:16.139286+00:00",
+          "operationName": "Microsoft.Sql/servers/databases/write",
+          "status": "Accepted",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:39:16.092694+00:00",
+          "operationName": "Microsoft.Sql/servers/firewallrules/write",
+          "status": "Succeeded",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:39:15.623658+00:00",
+          "operationName": "Microsoft.Sql/servers/firewallrules/write",
+          "status": "Started",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:39:15.623658+00:00",
+          "operationName": "Microsoft.Sql/servers/databases/write",
+          "status": "Started",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:38:53.811797+00:00",
+          "operationName": "Microsoft.Sql/servers/read",
+          "status": "Running",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:38:33.358217+00:00",
+          "operationName": "Microsoft.Sql/servers/read",
+          "status": "Running",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:38:27.908624+00:00",
+          "operationName": "Microsoft.Sql/servers/read",
+          "status": "Running",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:38:26.260553+00:00",
+          "operationName": "Microsoft.Sql/servers/write",
+          "status": "Accepted",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        },
+        {
+          "eventTimestamp": "2026-06-24T08:38:25.713658+00:00",
+          "operationName": "Microsoft.Sql/servers/write",
+          "status": "Started",
+          "caller": "anns@cytexio.onmicrosoft.com",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource_provider_name": "Microsoft.Sql"
+        }
+      ],
+      "caller_app_ids": [
+        "c44b4083-3bb0-49c1-b47d-974e53cbdf3c"
+      ],
+      "resource_providers": [
+        "Microsoft.Sql",
+        "MICROSOFT.SQL"
+      ]
+    }
+  ]
+}

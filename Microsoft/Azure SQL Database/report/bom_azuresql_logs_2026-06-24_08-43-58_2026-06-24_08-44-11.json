@@ -1,0 +1,283 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-24T08:44:11.090197+00:00",
+    "tools": [
+      {
+        "name": "azure-sql-bom-generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-azure-tenant",
+      "name": "azure-tenant-76961126-e318-48ae-a31f-884b4af49fd1",
+      "version": "1",
+      "properties": [
+        {
+          "name": "azure:TenantId",
+          "value": "76961126-e318-48ae-a31f-884b4af49fd1"
+        },
+        {
+          "name": "source:LogFile",
+          "value": "azuresql_logs_2026-06-24_08-43-58.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "component/c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+      "name": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+      "version": "1",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "ClientApplication"
+        },
+        {
+          "name": "azure:AppId",
+          "value": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "type": "service",
+      "bom-ref": "service/server-test-logsgetter",
+      "name": "test-logsgetter",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "Microsoft.Sql/servers"
+        },
+        {
+          "name": "azure:ResourceId",
+          "value": "/subscriptions/578f7d16-b299-4b9f-8f47-fa0bc5427842/resourceGroups/logs-test-rg/providers/Microsoft.Sql/servers/test-logsgetter"
+        },
+        {
+          "name": "azure:Location",
+          "value": "swedencentral"
+        },
+        {
+          "name": "azure:ResourceGroup",
+          "value": "logs-test-rg"
+        },
+        {
+          "name": "azure:SubscriptionId",
+          "value": "578f7d16-b299-4b9f-8f47-fa0bc5427842"
+        },
+        {
+          "name": "azure:FQDN",
+          "value": "test-logsgetter.database.windows.net"
+        },
+        {
+          "name": "azure:Version",
+          "value": "12.0"
+        },
+        {
+          "name": "azure:State",
+          "value": "Ready"
+        },
+        {
+          "name": "azure:AdminLogin",
+          "value": "CloudSA0e730299"
+        },
+        {
+          "name": "azure:PublicNetworkAccess",
+          "value": "Enabled"
+        },
+        {
+          "name": "azure:MinimalTLSVersion",
+          "value": "1.2"
+        },
+        {
+          "name": "azure:DatabaseCount",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "bom-ref": "service/db-test-logsgetter-free-sql-db-6552242",
+      "name": "free-sql-db-6552242",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "Microsoft.Sql/servers/databases"
+        },
+        {
+          "name": "azure:ParentServer",
+          "value": "test-logsgetter"
+        },
+        {
+          "name": "azure:SkuTier",
+          "value": "GeneralPurpose"
+        },
+        {
+          "name": "azure:SkuName",
+          "value": "GP_S_Gen5"
+        },
+        {
+          "name": "azure:SkuCapacity",
+          "value": "2"
+        },
+        {
+          "name": "azure:Status",
+          "value": "Online"
+        },
+        {
+          "name": "azure:Collation",
+          "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        {
+          "name": "azure:MaxSizeGB",
+          "value": "32.0"
+        },
+        {
+          "name": "azure:ZoneRedundant",
+          "value": "false"
+        },
+        {
+          "name": "azure:ReadScale",
+          "value": "Disabled"
+        },
+        {
+          "name": "azure:BackupStorageRedundancy",
+          "value": "Local"
+        },
+        {
+          "name": "azure:InElasticPool",
+          "value": "false"
+        },
+        {
+          "name": "azure:CreatedAt",
+          "value": "2026-06-24T08:40:01.643000+00:00"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "bom-ref": "service/db-test-logsgetter-master",
+      "name": "master",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "Microsoft.Sql/servers/databases"
+        },
+        {
+          "name": "azure:ParentServer",
+          "value": "test-logsgetter"
+        },
+        {
+          "name": "azure:SkuTier",
+          "value": "System"
+        },
+        {
+          "name": "azure:SkuName",
+          "value": "GP_SYSTEM"
+        },
+        {
+          "name": "azure:SkuCapacity",
+          "value": "4"
+        },
+        {
+          "name": "azure:Status",
+          "value": "Online"
+        },
+        {
+          "name": "azure:Collation",
+          "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        {
+          "name": "azure:MaxSizeGB",
+          "value": "100.0"
+        },
+        {
+          "name": "azure:ZoneRedundant",
+          "value": "false"
+        },
+        {
+          "name": "azure:ReadScale",
+          "value": "Disabled"
+        },
+        {
+          "name": "azure:BackupStorageRedundancy",
+          "value": "Geo"
+        },
+        {
+          "name": "azure:InElasticPool",
+          "value": "false"
+        },
+        {
+          "name": "azure:CreatedAt",
+          "value": "2026-06-24T08:39:09.317000+00:00"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "bom-ref": "service/Microsoft.Sql",
+      "name": "Microsoft.Sql",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "ResourceProvider"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "bom-ref": "service/MICROSOFT.SQL",
+      "name": "MICROSOFT.SQL",
+      "properties": [
+        {
+          "name": "azure:ResourceType",
+          "value": "ResourceProvider"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-azure-tenant",
+      "dependsOn": [
+        "service/server-test-logsgetter",
+        "service/Microsoft.Sql",
+        "service/MICROSOFT.SQL"
+      ]
+    },
+    {
+      "ref": "service/server-test-logsgetter",
+      "dependsOn": [
+        "service/db-test-logsgetter-free-sql-db-6552242",
+        "service/db-test-logsgetter-master",
+        "component/c44b4083-3bb0-49c1-b47d-974e53cbdf3c"
+      ]
+    },
+    {
+      "ref": "service/db-test-logsgetter-free-sql-db-6552242",
+      "dependsOn": []
+    },
+    {
+      "ref": "service/db-test-logsgetter-master",
+      "dependsOn": []
+    },
+    {
+      "ref": "service/Microsoft.Sql",
+      "dependsOn": []
+    },
+    {
+      "ref": "service/MICROSOFT.SQL",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+      "dependsOn": []
+    }
+  ]
+}

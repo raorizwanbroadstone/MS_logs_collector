@@ -1,0 +1,977 @@
+[
+  {
+    "EventId": "41949cbe-e0b4-4b1a-aaf4-f74484548dde",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:51:05+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:51:05Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"7fa70be9-9032-4333-8ef0-5c0033b15cf1\",\"eventID\":\"41949cbe-e0b4-4b1a-aaf4-f74484548dde\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "ffce8ccb-5caf-4767-aee9-b90f05b73817",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:45:12+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:45:12Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"e8d8ee13-ccfd-47a4-a49f-fd92cb763693\",\"eventID\":\"ffce8ccb-5caf-4767-aee9-b90f05b73817\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "13342d05-8d78-48c4-81f5-fa7928e19934",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:39:17+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:39:17Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"8f7d4041-1214-462d-86b5-1b88c38c0b8b\",\"eventID\":\"13342d05-8d78-48c4-81f5-fa7928e19934\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "97883abd-781f-43f0-8d2f-f68eee182d24",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:33:24+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:33:24Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"c60e0e79-4da0-4cf6-b837-e4bbf28f06da\",\"eventID\":\"97883abd-781f-43f0-8d2f-f68eee182d24\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "dda9ca08-3650-485e-9ad1-6efa79ced37c",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:27:33+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:27:33Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"d66f46d4-4846-4471-b0a2-8dda199c65a7\",\"eventID\":\"dda9ca08-3650-485e-9ad1-6efa79ced37c\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "4d4edfd4-ea3f-41c9-b8fd-1c8fa0d4ce40",
+    "EventName": "DescribeEventSubscriptions",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:24:34+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:24:34Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeEventSubscriptions\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"c2a1fd26-f661-47d3-9757-48cb480273fd\",\"eventID\":\"4d4edfd4-ea3f-41c9-b8fd-1c8fa0d4ce40\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "96f149b3-de97-4225-ace5-c3da65899319",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:18:47+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:18:47Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"6bd9d9c0-65cc-4df8-8801-73ed4ea778de\",\"eventID\":\"96f149b3-de97-4225-ace5-c3da65899319\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "087de1c4-74d2-4a29-af6d-e36ea5d79535",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:12:44+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:12:44Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"01e1c77c-271c-4262-a64d-05ed5285a3d5\",\"eventID\":\"087de1c4-74d2-4a29-af6d-e36ea5d79535\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "212eeaf8-eb93-4740-b0ba-d14b0826bf41",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:07:01+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:07:01Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"a960dde6-02e8-4aba-888b-7b2b4c3635b7\",\"eventID\":\"212eeaf8-eb93-4740-b0ba-d14b0826bf41\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "f7eb59e6-8bfc-4893-af2d-065eb2865d3a",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T09:04:10+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T04:04:10Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"d6896b25-fe04-47cf-811b-c12a6d61fa0f\",\"eventID\":\"f7eb59e6-8bfc-4893-af2d-065eb2865d3a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "f6f755d2-59c9-41d3-a0d6-5a72cc8e85f2",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:58:16+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:58:16Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"08866aa5-7f65-4eec-a6c5-291341762ec5\",\"eventID\":\"f6f755d2-59c9-41d3-a0d6-5a72cc8e85f2\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "b13d2af2-6e03-401d-a1d3-bc09730673fe",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:55:21+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:55:21Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"26982d73-cd5c-4188-9555-902bdab42b52\",\"eventID\":\"b13d2af2-6e03-401d-a1d3-bc09730673fe\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "3badc1d8-028a-4aaf-8aea-e07a722808ea",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:52:24+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:52:24Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"c4526b29-0848-4dba-8037-828886f62558\",\"eventID\":\"3badc1d8-028a-4aaf-8aea-e07a722808ea\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "69da19d4-dca5-4b39-8b35-81ac65b2bad8",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:49:21+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:49:21Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"0d9a2ee4-b31d-42db-b541-9ae9ec923216\",\"eventID\":\"69da19d4-dca5-4b39-8b35-81ac65b2bad8\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "519ef8a8-6c3e-40c6-84c9-b8a74ff3d720",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:43:32+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:43:32Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"0a8e35d4-2ffc-4b5f-b62c-414b60a979c7\",\"eventID\":\"519ef8a8-6c3e-40c6-84c9-b8a74ff3d720\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "5117e230-debc-40f5-a12f-507003d44b43",
+    "EventName": "DescribeEventSubscriptions",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:40:39+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:40:39Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeEventSubscriptions\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"83252592-09ba-4b0e-8613-e9aaac208203\",\"eventID\":\"5117e230-debc-40f5-a12f-507003d44b43\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "a9ae2989-8c73-4d49-803e-25a8f70c80c2",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:34:43+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:34:43Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"307b0a17-cd0b-4831-a5db-9db29eef1cdc\",\"eventID\":\"a9ae2989-8c73-4d49-803e-25a8f70c80c2\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "d782204d-8c51-4414-8f12-4e64b1873c6a",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:28:54+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:28:54Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"85d37036-4023-4d75-bf17-c381cbde70d7\",\"eventID\":\"d782204d-8c51-4414-8f12-4e64b1873c6a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "577cceb8-fab7-489c-b61a-7ad7c508e4bc",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:22:59+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:22:59Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"133e12ee-14e9-432d-8fee-acdc1dac27c0\",\"eventID\":\"577cceb8-fab7-489c-b61a-7ad7c508e4bc\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "6a652877-326f-43c7-b719-af6de648fbfc",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:20:07+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:20:07Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"c34ff0b1-47ba-4df8-b8fe-84b76ad6d611\",\"eventID\":\"6a652877-326f-43c7-b719-af6de648fbfc\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "fcad083b-8088-4643-9932-dc7eab57cebe",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T08:14:05+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T03:14:05Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/rds#1.77.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"b1e930f2-548d-420a-9d36-f0980cfd33b1\",\"eventID\":\"fcad083b-8088-4643-9932-dc7eab57cebe\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "6c7d1eaf-dc85-4a41-aade-eadef6d8c0a5",
+    "EventName": "DescribeDBClusterSnapshots",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T07:10:57+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T02:10:57Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusterSnapshots\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false,\"includePublic\":false},\"responseElements\":null,\"requestID\":\"036eed7e-b1c0-49e6-ba08-7d19cc3db756\",\"eventID\":\"6c7d1eaf-dc85-4a41-aade-eadef6d8c0a5\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false,
+      "includePublic": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "9349102c-5ad2-46bb-b716-579b4ec23737",
+    "EventName": "DescribeDBClusterSnapshots",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T07:07:58+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T02:07:58Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusterSnapshots\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false,\"includePublic\":false},\"responseElements\":null,\"requestID\":\"a3eb6cee-3032-47e3-b25a-209abb938a8a\",\"eventID\":\"9349102c-5ad2-46bb-b716-579b4ec23737\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false,
+      "includePublic": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "23f6e63b-4087-44fd-9dfb-2593af666e0a",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T07:05:06+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T02:05:06Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"8877789f-9fbb-43aa-b690-7d091913271f\",\"eventID\":\"23f6e63b-4087-44fd-9dfb-2593af666e0a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "fd91d8f4-9832-4a6e-8938-89eb1907cad4",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T06:59:11+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T01:59:11Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"35c06a84-4914-4c9f-9b93-057658439c4c\",\"eventID\":\"fd91d8f4-9832-4a6e-8938-89eb1907cad4\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "0a7a5f80-cd18-4f05-a351-eb3aabe224f4",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T06:53:27+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T01:53:27Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"3aef6cde-6f90-4da2-8f4b-577f8673d27b\",\"eventID\":\"0a7a5f80-cd18-4f05-a351-eb3aabe224f4\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "5aa4916c-c960-4b3e-a178-9183683f7b1a",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-24T06:47:28+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-24T01:47:28Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/neptune#1.31.6\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"be26bb02-fdd5-4473-91ac-e8db06a35fae\",\"eventID\":\"5aa4916c-c960-4b3e-a178-9183683f7b1a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "e1eaedee-a186-4823-a8bd-bc2f04f99db2",
+    "EventName": "DescribeDBClusterSnapshots",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+    "EventTime": "2026-06-24T03:01:53+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNY5SCTKDICZ\",\"arn\":\"arn:aws:iam::986601184113:user/cytexaudit\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNY2UXNZV4Z\",\"userName\":\"cytexaudit\"},\"eventTime\":\"2026-06-23T22:01:53Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusterSnapshots\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false,\"includePublic\":false},\"responseElements\":null,\"requestID\":\"6a2e9788-19d8-456c-bdba-d965286ea125\",\"eventID\":\"e1eaedee-a186-4823-a8bd-bc2f04f99db2\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false,
+      "includePublic": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "2fd5e4dd-da3c-4353-bc82-f2b3b3f29699",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+    "EventTime": "2026-06-24T02:55:09+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNY5SCTKDICZ\",\"arn\":\"arn:aws:iam::986601184113:user/cytexaudit\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNY2UXNZV4Z\",\"userName\":\"cytexaudit\"},\"eventTime\":\"2026-06-23T21:55:09Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"75af77be-3976-4970-bc73-b5eff056de5c\",\"eventID\":\"2fd5e4dd-da3c-4353-bc82-f2b3b3f29699\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "6018f1e9-0ed1-4ac9-a526-9d702e9919db",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+    "EventTime": "2026-06-24T02:51:58+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNY5SCTKDICZ\",\"arn\":\"arn:aws:iam::986601184113:user/cytexaudit\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNY2UXNZV4Z\",\"userName\":\"cytexaudit\"},\"eventTime\":\"2026-06-23T21:51:58Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"f10aa6f1-baf7-4856-bfe5-9bf869391c74\",\"eventID\":\"6018f1e9-0ed1-4ac9-a526-9d702e9919db\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "8a30d0d0-6e08-4153-8154-7aa3552c2c75",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+    "EventTime": "2026-06-24T02:45:31+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "cytexaudit",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNY5SCTKDICZ\",\"arn\":\"arn:aws:iam::986601184113:user/cytexaudit\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNY2UXNZV4Z\",\"userName\":\"cytexaudit\"},\"eventTime\":\"2026-06-23T21:45:31Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"e298c4f0-0ccc-4e2d-bf45-a6f0e095e896\",\"eventID\":\"8a30d0d0-6e08-4153-8154-7aa3552c2c75\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNY5SCTKDICZ",
+      "arn": "arn:aws:iam::986601184113:user/cytexaudit",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNY2UXNZV4Z",
+      "userName": "cytexaudit"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "0cecfbdc-e2c6-44a3-9d01-715a9368ba46",
+    "EventName": "DescribeDBClusterSnapshots",
+    "ReadOnly": "true",
+    "AccessKeyId": "ASIA6LNQDLNYYOEVHO47",
+    "EventTime": "2026-06-24T01:09:20+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA6LNQDLNYZXZSANPKO:resource-explorer-2\",\"arn\":\"arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2\",\"accountId\":\"986601184113\",\"accessKeyId\":\"ASIA6LNQDLNYYOEVHO47\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA6LNQDLNYZXZSANPKO\",\"arn\":\"arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer\",\"accountId\":\"986601184113\",\"userName\":\"AWSServiceRoleForResourceExplorer\"},\"attributes\":{\"creationDate\":\"2026-06-23T20:09:20Z\",\"mfaAuthenticated\":\"false\"}},\"invokedBy\":\"resource-explorer-2.amazonaws.com\"},\"eventTime\":\"2026-06-23T20:09:20Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusterSnapshots\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"resource-explorer-2.amazonaws.com\",\"userAgent\":\"resource-explorer-2.amazonaws.com\",\"requestParameters\":{\"includeShared\":false,\"includePublic\":false},\"responseElements\":null,\"requestID\":\"e5b12229-fc9f-42cc-b3a0-ab3eea564f2e\",\"eventID\":\"0cecfbdc-e2c6-44a3-9d01-715a9368ba46\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\"}",
+    "requestParameters": {
+      "includeShared": false,
+      "includePublic": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYYOEVHO47",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T20:09:20Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "927e8a2c-34f2-423d-944f-1ae1adee45bd",
+    "EventName": "DescribeGlobalClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "ASIA6LNQDLNYTO67ZAGK",
+    "EventTime": "2026-06-23T17:11:44+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "resource-explorer-2",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA6LNQDLNYZXZSANPKO:resource-explorer-2\",\"arn\":\"arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2\",\"accountId\":\"986601184113\",\"accessKeyId\":\"ASIA6LNQDLNYTO67ZAGK\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA6LNQDLNYZXZSANPKO\",\"arn\":\"arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer\",\"accountId\":\"986601184113\",\"userName\":\"AWSServiceRoleForResourceExplorer\"},\"attributes\":{\"creationDate\":\"2026-06-23T12:11:44Z\",\"mfaAuthenticated\":\"false\"}},\"invokedBy\":\"resource-explorer-2.amazonaws.com\"},\"eventTime\":\"2026-06-23T12:11:44Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeGlobalClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"resource-explorer-2.amazonaws.com\",\"userAgent\":\"resource-explorer-2.amazonaws.com\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"427aa2d7-ad66-4dee-bb68-d06aaa57967e\",\"eventID\":\"927e8a2c-34f2-423d-944f-1ae1adee45bd\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\"}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROA6LNQDLNYZXZSANPKO:resource-explorer-2",
+      "arn": "arn:aws:sts::986601184113:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+      "accountId": "986601184113",
+      "accessKeyId": "ASIA6LNQDLNYTO67ZAGK",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROA6LNQDLNYZXZSANPKO",
+          "arn": "arn:aws:iam::986601184113:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "accountId": "986601184113",
+          "userName": "AWSServiceRoleForResourceExplorer"
+        },
+        "attributes": {
+          "creationDate": "2026-06-23T12:11:44Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "resource-explorer-2.amazonaws.com"
+    },
+    "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "0eaecf34-132f-4a6d-a55f-966ea4ab3792",
+    "EventName": "DescribeDBClusterSnapshots",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-23T16:47:53+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-23T11:47:53Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusterSnapshots\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false,\"includePublic\":false},\"responseElements\":null,\"requestID\":\"f89226b3-958d-48d1-8b1a-3b623d76d78a\",\"eventID\":\"0eaecf34-132f-4a6d-a55f-966ea4ab3792\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false,
+      "includePublic": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "35f4a373-3811-4fdc-a6bf-c6280731154e",
+    "EventName": "DescribeDBInstances",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-23T16:41:40+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-23T11:41:40Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBInstances\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100},\"responseElements\":null,\"requestID\":\"577701ed-fcb7-4d46-9950-4aa1d0396c13\",\"eventID\":\"35f4a373-3811-4fdc-a6bf-c6280731154e\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "dcbdbe0d-a532-4056-ad27-150afd683e6f",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-23T16:38:22+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-23T11:38:22Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"807be5c7-0900-4723-94bc-699d8b462159\",\"eventID\":\"dcbdbe0d-a532-4056-ad27-150afd683e6f\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  },
+  {
+    "EventId": "33d072c1-1101-470f-ba42-aec991ebe4af",
+    "EventName": "DescribeDBClusters",
+    "ReadOnly": "true",
+    "AccessKeyId": "AKIA6LNQDLNYRKWPUROC",
+    "EventTime": "2026-06-23T16:32:04+05:00",
+    "EventSource": "rds.amazonaws.com",
+    "Username": "agentic-access",
+    "Resources": [],
+    "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDA6LNQDLNYQWKABZEKD\",\"arn\":\"arn:aws:iam::986601184113:user/agentic-access\",\"accountId\":\"986601184113\",\"accessKeyId\":\"AKIA6LNQDLNYRKWPUROC\",\"userName\":\"agentic-access\"},\"eventTime\":\"2026-06-23T11:32:04Z\",\"eventSource\":\"rds.amazonaws.com\",\"eventName\":\"DescribeDBClusters\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"64.176.200.95\",\"userAgent\":\"aws-sdk-go-v2/1.36.6 ua/2.1 os/linux lang/go#1.24.5 md/GOOS#linux md/GOARCH#amd64 api/docdb#1.34.0\",\"requestParameters\":{\"maxRecords\":100,\"includeShared\":false},\"responseElements\":null,\"requestID\":\"962a67d2-ba60-48db-a0e3-4c8f5977662c\",\"eventID\":\"33d072c1-1101-470f-ba42-aec991ebe4af\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"986601184113\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"rds.us-east-1.amazonaws.com\"}}",
+    "requestParameters": {
+      "maxRecords": 100,
+      "includeShared": false
+    },
+    "responseElements": {},
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA6LNQDLNYQWKABZEKD",
+      "arn": "arn:aws:iam::986601184113:user/agentic-access",
+      "accountId": "986601184113",
+      "accessKeyId": "AKIA6LNQDLNYRKWPUROC",
+      "userName": "agentic-access"
+    },
+    "sourceIPAddress": "64.176.200.95",
+    "awsRegion": "us-east-1"
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-24T07:56:42.253125+00:00",
+    "tools": [
+      {
+        "name": "aws-rds-bom-generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-aws-account",
+      "name": "aws-account",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "source:LogFile",
+          "value": "rds_logs_2026-06-24_07-56-38.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "component/IAMUser-agentic-access",
+      "name": "agentic-access",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "agentic-access"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "component/IAMUser-cytexaudit",
+      "name": "cytexaudit",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "cytexaudit"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "component/AssumedRole-AWSServiceRoleForResourceExplorer",
+      "name": "AWSServiceRoleForResourceExplorer",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "AssumedRole"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "AWSServiceRoleForResourceExplorer"
+        }
+      ]
+    }
+  ],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "root-aws-account",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/IAMUser-agentic-access",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/IAMUser-cytexaudit",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/AssumedRole-AWSServiceRoleForResourceExplorer",
+      "dependsOn": []
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-24T08:05:14.281580+00:00",
+    "tools": [
+      {
+        "name": "aws-rds-bom-generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-aws-account",
+      "name": "aws-account",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "source:LogFile",
+          "value": "rds_logs_2026-06-24_08-05-08.json"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "component/IAMUser-agentic-access",
+      "name": "agentic-access",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "agentic-access"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "component/IAMUser-amazon_rds_logs",
+      "name": "amazon_rds_logs",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "amazon_rds_logs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "component/IAMUser-cytexaudit",
+      "name": "cytexaudit",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "IAMUser"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "cytexaudit"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "component/AssumedRole-AWSServiceRoleForResourceExplorer",
+      "name": "AWSServiceRoleForResourceExplorer",
+      "version": "1",
+      "properties": [
+        {
+          "name": "aws:PrincipalType",
+          "value": "AssumedRole"
+        },
+        {
+          "name": "aws:PrincipalName",
+          "value": "AWSServiceRoleForResourceExplorer"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "type": "service",
+      "bom-ref": "service/DBCluster-database-1",
+      "name": "database-1",
+      "properties": [
+        {
+          "name": "aws:ResourceType",
+          "value": "DBCluster"
+        },
+        {
+          "name": "aws:ResourceName",
+          "value": "database-1"
+        },
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "aws:DBClusterArn",
+          "value": "arn:aws:rds:us-east-1:986601184113:cluster:database-1"
+        },
+        {
+          "name": "aws:Engine",
+          "value": "aurora-postgresql"
+        },
+        {
+          "name": "aws:EngineVersion",
+          "value": "17.7"
+        },
+        {
+          "name": "aws:EngineMode",
+          "value": "provisioned"
+        },
+        {
+          "name": "aws:Status",
+          "value": "available"
+        },
+        {
+          "name": "aws:MultiAZ",
+          "value": "false"
+        },
+        {
+          "name": "aws:StorageEncrypted",
+          "value": "false"
+        },
+        {
+          "name": "aws:DeletionProtection",
+          "value": "false"
+        },
+        {
+          "name": "aws:Endpoint",
+          "value": "database-1.cluster-cshhmys4u6g1.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "name": "aws:ReaderEndpoint",
+          "value": "database-1.cluster-ro-cshhmys4u6g1.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "name": "aws:ClusterMemberCount",
+          "value": "1"
+        },
+        {
+          "name": "aws:AvailabilityZones",
+          "value": "us-east-1d, us-east-1b, us-east-1a"
+        },
+        {
+          "name": "aws:MasterUsername",
+          "value": "postgres"
+        },
+        {
+          "name": "aws:BackupRetentionDays",
+          "value": "1"
+        },
+        {
+          "name": "aws:IAMDBAuthEnabled",
+          "value": "true"
+        },
+        {
+          "name": "aws:CreatedAt",
+          "value": "2026-06-24T07:55:56.169000+00:00"
+        },
+        {
+          "name": "aws:InventoryStatus",
+          "value": "Found"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "bom-ref": "service/DBInstance-database-1-instance-1",
+      "name": "database-1-instance-1",
+      "properties": [
+        {
+          "name": "aws:ResourceType",
+          "value": "DBInstance"
+        },
+        {
+          "name": "aws:ResourceName",
+          "value": "database-1-instance-1"
+        },
+        {
+          "name": "aws:Region",
+          "value": "us-east-1"
+        },
+        {
+          "name": "aws:DBInstanceArn",
+          "value": "arn:aws:rds:us-east-1:986601184113:db:database-1-instance-1"
+        },
+        {
+          "name": "aws:Engine",
+          "value": "aurora-postgresql"
+        },
+        {
+          "name": "aws:EngineVersion",
+          "value": "17.7"
+        },
+        {
+          "name": "aws:DBInstanceClass",
+          "value": "db.serverless"
+        },
+        {
+          "name": "aws:Status",
+          "value": "available"
+        },
+        {
+          "name": "aws:MultiAZ",
+          "value": "false"
+        },
+        {
+          "name": "aws:StorageEncrypted",
+          "value": "false"
+        },
+        {
+          "name": "aws:StorageType",
+          "value": "aurora"
+        },
+        {
+          "name": "aws:AllocatedStorageGB",
+          "value": "1"
+        },
+        {
+          "name": "aws:DeletionProtection",
+          "value": "false"
+        },
+        {
+          "name": "aws:PubliclyAccessible",
+          "value": "false"
+        },
+        {
+          "name": "aws:IAMDBAuthEnabled",
+          "value": "true"
+        },
+        {
+          "name": "aws:Endpoint",
+          "value": "database-1-instance-1.cshhmys4u6g1.us-east-1.rds.amazonaws.com:5432"
+        },
+        {
+          "name": "aws:AvailabilityZone",
+          "value": "us-east-1d"
+        },
+        {
+          "name": "aws:MasterUsername",
+          "value": "postgres"
+        },
+        {
+          "name": "aws:CACertificate",
+          "value": "rds-ca-rsa2048-g1"
+        },
+        {
+          "name": "aws:BackupRetentionDays",
+          "value": "1"
+        },
+        {
+          "name": "aws:AutoMinorVersionUpgrade",
+          "value": "true"
+        },
+        {
+          "name": "aws:CreatedAt",
+          "value": "2026-06-24T07:55:57.956000+00:00"
+        },
+        {
+          "name": "aws:InventoryStatus",
+          "value": "Found"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "root-aws-account",
+      "dependsOn": [
+        "service/DBCluster-database-1",
+        "service/DBInstance-database-1-instance-1"
+      ]
+    },
+    {
+      "ref": "service/DBCluster-database-1",
+      "dependsOn": [
+        "component/IAMUser-agentic-access"
+      ]
+    },
+    {
+      "ref": "service/DBInstance-database-1-instance-1",
+      "dependsOn": [
+        "component/IAMUser-agentic-access"
+      ]
+    },
+    {
+      "ref": "component/IAMUser-agentic-access",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/IAMUser-amazon_rds_logs",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/IAMUser-cytexaudit",
+      "dependsOn": []
+    },
+    {
+      "ref": "component/AssumedRole-AWSServiceRoleForResourceExplorer",
+      "dependsOn": []
+    }
+  ]
+}

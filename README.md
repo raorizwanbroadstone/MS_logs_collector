@@ -8,8 +8,8 @@ A multi-cloud log collection and asset inventory tool. Each module connects to a
 
 | Provider | Modules | SDK |
 | --- | --- | --- |
-| [AWS](AWS/) | CloudTrail, IAM, Bedrock, DynamoDB, EC2, Lambda, S3, SageMaker | `boto3` |
-| [Microsoft](Microsoft/) | Azure Cosmos DB, Azure Entra ID, Azure Machine Learning, Azure OpenAI, Azure Storage, Microsoft 365 | Azure SDK / Microsoft Graph |
+| [AWS](AWS/) | CloudTrail, IAM, Bedrock, DynamoDB, EC2, Lambda, RDS, S3, SageMaker | `boto3` |
+| [Microsoft](Microsoft/) | Azure Cosmos DB, Azure Entra ID, Azure Machine Learning, Azure OpenAI, Azure SQL Database, Azure Storage, Microsoft 365 | Azure SDK / Microsoft Graph |
 
 ---
 
@@ -79,5 +79,6 @@ Output lands in `logs/` and `report/` inside the module directory, timestamped o
 | `azure-identity`, `azure-mgmt-*`, `azure-monitor-query` | Azure authentication and service APIs |
 | `msal`, `requests` | Microsoft Graph API authentication (Entra ID, M365) |
 | `azure-mgmt-cosmosdb` | Cosmos DB account details — `pip install azure-mgmt-cosmosdb` |
+| `azure-mgmt-sql` | Azure SQL server and database details — `pip install azure-mgmt-sql` |
 | `ijson` | Memory-efficient streaming of large log files |
 | `mmh3`, `bitarray` | Bloom filter for fast cross-event deduplication |
