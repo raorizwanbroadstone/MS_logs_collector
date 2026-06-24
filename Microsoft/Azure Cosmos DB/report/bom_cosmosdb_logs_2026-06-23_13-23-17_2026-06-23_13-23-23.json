@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-23T13:23:23.266295+00:00",
+    "tools": [
+      {
+        "name": "azure-cosmosdb-bom-generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "platform",
+      "bom-ref": "root-azure-tenant",
+      "name": "azure-tenant-76961126-e318-48ae-a31f-884b4af49fd1",
+      "version": "1",
+      "properties": [
+        {
+          "name": "azure:TenantId",
+          "value": "76961126-e318-48ae-a31f-884b4af49fd1"
+        },
+        {
+          "name": "source:LogFile",
+          "value": "cosmosdb_logs_2026-06-23_13-23-17.json"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "root-azure-tenant",
+      "dependsOn": []
+    }
+  ]
+}
